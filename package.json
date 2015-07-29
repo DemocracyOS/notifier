@@ -29,6 +29,7 @@
     "moment": "2.9.0",
     "mongojs": "^1.2.1",
     "node-mandrill": "^1.0.1",
+    "require-all": "^1.1.0",
     "t-component": "^1.0.0"
   }
 }
