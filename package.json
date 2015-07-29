@@ -1,0 +1,34 @@
+{
+  "name": "democracyos-notifier",
+  "version": "0.0.1",
+  "description": "Notifications engine with job queuing and scheduling backed by MongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DemocracyOS/notifier.git"
+  },
+  "keywords": [
+    "notifier",
+    "democracyos",
+    "notifiations",
+    "email"
+  ],
+  "author": "Democracia en Red <speak@democracyos.org> (http://democraciaenred.org/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DemocracyOS/notifier/issues"
+  },
+  "homepage": "https://github.com/DemocracyOS/notifier",
+  "dependencies": {
+    "agenda": "^0.6.28",
+    "debug": "^2.2.0",
+    "jade": "^1.11.0",
+    "moment": "2.9.0",
+    "mongojs": "^1.2.1",
+    "node-mandrill": "^1.0.1",
+    "t-component": "^1.0.0"
+  }
+}
