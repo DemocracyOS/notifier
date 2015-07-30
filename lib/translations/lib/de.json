@@ -6,13 +6,13 @@
   "templates.welcome-email.body": "Bitte <a href=\"VALIDATE_MAIL_URL\">hier klicken</a>, um deine E-Mail-Adresse zu bestätigen.",
   "templates.welcome-email.ps": "Bitte diese E-Mail ignorieren, falls du dich nicht bei DemocracyOS angemeldet hast.",
 
-  "templates.forgot-password.subject": "Zurücksetzen des Passworts wurde angefordert",
-  "templates.forgot-password.body": "Bitte <a href=\"RESET_PASSWORD_URL\">hier klicken</a>, um das Passwort zurückzusetzen.",
-  "templates.forgot-password.ps": "Bitte diese E-Mail ignorieren, falls kein Zurücksetzen des Passwortes angefordert wurde.",
+  "templates.reset-password.subject": "Zurücksetzen des Passworts wurde angefordert",
+  "templates.reset-password.body": "Bitte <a href=\"RESET_PASSWORD_URL\">hier klicken</a>, um das Passwort zurückzusetzen.",
+  "templates.reset-password.ps": "Bitte diese E-Mail ignorieren, falls kein Zurücksetzen des Passwortes angefordert wurde.",
 
-  "templates.reply-argument.subject": "Jemand, um Ihr Argument geantwortet",
-  "templates.reply-argument.body": "Du hast eine neue Antwort auf ihr Argument:",
-  "templates.reply-argument.body2": "Bitte <a href=\"URL\">hier klicken</a>, um es zu sehen.",
+  "templates.comment-reply.subject": "Jemand, um Ihr Argument geantwortet",
+  "templates.comment-reply.body": "Du hast eine neue Antwort auf ihr Argument:",
+  "templates.comment-reply.body2": "Bitte <a href=\"URL\">hier klicken</a>, um es zu sehen.",
 
   "templates.law-published.subject": "Neues Gesetz veröffentlicht",
   "templates.law-published.body": "Ein neues Gesetz wurde veröffentlicht:",

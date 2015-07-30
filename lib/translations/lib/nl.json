@@ -6,13 +6,13 @@
   "templates.welcome-email.body": "<a href=\"VALIDATE_MAIL_URL\">Klik hier</a> om je e-mail adres te bevestigen.",
   "templates.welcome-email.ps": "Als je je niet hebt aangemeld, kun je deze e-mail negeren.",
 
-  "templates.forgot-password.subject": "Wachtwoord herstellen aangevraagd",
-  "templates.forgot-password.body": "<a href=\"RESET_PASSWORD_URL\">Klik hier</a> om je wachtwoord opnieuw in te stellen.",
-  "templates.forgot-password.ps": "Als je niet gevraagd hebt om je wachtwoord opnieuw in te stellen, kun je deze e-mail negeren.",
+  "templates.reset-password.subject": "Wachtwoord herstellen aangevraagd",
+  "templates.reset-password.body": "<a href=\"RESET_PASSWORD_URL\">Klik hier</a> om je wachtwoord opnieuw in te stellen.",
+  "templates.reset-password.ps": "Als je niet gevraagd hebt om je wachtwoord opnieuw in te stellen, kun je deze e-mail negeren.",
 
-  "templates.reply-argument.subject": "Iemand beantwoord je betoog",
-  "templates.reply-argument.body": "U heeft een nieuw antwoord op je argument:",
-  "templates.reply-argument.body2": "<a href=\"URL\">Klik hier</a> om het te zien.",
+  "templates.comment-reply.subject": "Iemand beantwoord je betoog",
+  "templates.comment-reply.body": "U heeft een nieuw antwoord op je argument:",
+  "templates.comment-reply.body2": "<a href=\"URL\">Klik hier</a> om het te zien.",
 
   "templates.law-published.subject": "Nieuwe wet gepubliceerd",
   "templates.law-published.body": "Een nieuwe wet werd gepubliceerd:",

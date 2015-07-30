@@ -6,13 +6,13 @@
   "templates.welcome-email.body": "Пожалуйста <a href=\"VALIDATE_MAIL_URL\"> нажмите сюда </a> чтобы подтвердить адрес Вашей электронной почты.",
   "templates.welcome-email.ps": "PS: Если Вы не регистрировались, пожалуйста не обращайте внимания на это сообщение.",
 
-  "templates.forgot-password.subject": "Изменение пароля",
-  "templates.forgot-password.body": "Пожалуйста <a href=\"RESET_PASSWORD_URL\"> нажмите сюда </a> чтобы изменить Ваш пароль",
-  "templates.forgot-password.ps": "PS: если Вы не пытались изменить Ваш пароль, пожалуйста не обращайте внимания на это сообщение.",
+  "templates.reset-password.subject": "Изменение пароля",
+  "templates.reset-password.body": "Пожалуйста <a href=\"RESET_PASSWORD_URL\"> нажмите сюда </a> чтобы изменить Ваш пароль",
+  "templates.reset-password.ps": "PS: если Вы не пытались изменить Ваш пароль, пожалуйста не обращайте внимания на это сообщение.",
 
-  "templates.reply-argument.subject": "Кто-то ответил на Ваш аргумент",
-  "templates.reply-argument.body": "Кто-то дал ответ на Ваш аргумент:",
-  "templates.reply-argument.body2": "Пожалуйста <a href=\"URL\"> нажмите сюда </a> для просмотра.",
+  "templates.comment-reply.subject": "Кто-то ответил на Ваш аргумент",
+  "templates.comment-reply.body": "Кто-то дал ответ на Ваш аргумент:",
+  "templates.comment-reply.body2": "Пожалуйста <a href=\"URL\"> нажмите сюда </a> для просмотра.",
 
   "templates.law-published.subject": "Опубликован новый закон",
   "templates.law-published.body": "Новый закон был опубликован:",

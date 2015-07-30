@@ -6,13 +6,13 @@
   "templates.welcome-email.body": "Por favor <a href=\"VALIDATE_MAIL_URL\">fai click</a> para validar o teu enderezo de correo electrónico.",
   "templates.welcome-email.ps": "P.D.: se non creaches unha conta, por favor ignora esta mensaxe.",
 
-  "templates.forgot-password.subject": "Recuperar contrasinal",
-  "templates.forgot-password.body": "Por favor <a href=\"RESET_PASSWORD_URL\">fai click</a> para reestablecer o teu contrasinal",
-  "templates.forgot-password.ps": "P.D.: se non solicitaches recuperar o teu contrasinal, por favor ignora esta mensaxe",
+  "templates.reset-password.subject": "Recuperar contrasinal",
+  "templates.reset-password.body": "Por favor <a href=\"RESET_PASSWORD_URL\">fai click</a> para reestablecer o teu contrasinal",
+  "templates.reset-password.ps": "P.D.: se non solicitaches recuperar o teu contrasinal, por favor ignora esta mensaxe",
 
-  "templates.reply-argument.subject": "Alguen respondeu ao teu argumento",
-  "templates.reply-argument.body": "Tes unha nova resposta ao teu argumento.",
-  "templates.reply-argument.body2": "Por favor <a href=\"URL\">fai click</a> para vela.",
+  "templates.comment-reply.subject": "Alguen respondeu ao teu argumento",
+  "templates.comment-reply.body": "Tes unha nova resposta ao teu argumento.",
+  "templates.comment-reply.body2": "Por favor <a href=\"URL\">fai click</a> para vela.",
 
   "templates.law-published.subject": "Nova proposta publicada",
   "templates.law-published.body": "Unha nova proposta foi publicada:",

@@ -6,13 +6,13 @@
   "templates.welcome-email.body": "Cliquez s' il vous plaît <a href=\"VALIDATE_MAIL_URL\">sur ici</a> pour valider votre adresse de courriel.",
   "templates.welcome-email.ps": "Si vous n' avez pas creé un compte sur DemocracyOS, ignorez s' il vous plaît ce courriel.",
 
-  "templates.forgot-password.subject": "DemocracyOS - Rétablir mot de passe",
-  "templates.forgot-password.body": "Cliquez s' il vous plaît <a href=\"RESET_PASSWORD_URL\">sur ici</a> pour rétablir ton mot de passe",
-  "templates.forgot-password.ps": "Si vous n' avez pas demandé le rétablissement de votre mot de passe, ignorez s' il vous plaît ce courriel",
+  "templates.reset-password.subject": "DemocracyOS - Rétablir mot de passe",
+  "templates.reset-password.body": "Cliquez s' il vous plaît <a href=\"RESET_PASSWORD_URL\">sur ici</a> pour rétablir ton mot de passe",
+  "templates.reset-password.ps": "Si vous n' avez pas demandé le rétablissement de votre mot de passe, ignorez s' il vous plaît ce courriel",
 
-  "templates.reply-argument.subject": "Quelqu'un a répondu à vos arguments",
-  "templates.reply-argument.body": "Vous avez une nouvelle réponse sur vous l'argument",
-  "templates.reply-argument.body2": "Cliquez s'il vous plaît <a href=\"URL\">sur ici</a> pour voir",
+  "templates.comment-reply.subject": "Quelqu'un a répondu à vos arguments",
+  "templates.comment-reply.body": "Vous avez une nouvelle réponse sur vous l'argument",
+  "templates.comment-reply.body2": "Cliquez s'il vous plaît <a href=\"URL\">sur ici</a> pour voir",
 
   "templates.law-published.subject": "La nouvelle loi publiée",
   "templates.law-published.body": "Une nouvelle loi a été publiée:",
