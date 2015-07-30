@@ -3,9 +3,9 @@
  */
 
 var agenda = require('./lib/agenda')
-var all = require('require-all')
 var timing = require('./lib/utils/timing')
 var log = require('debug')('democracyos:notifier')
+var jobs = require('./lib/jobs')
 
 // fix this with an var exports=module.exports =function and just rewriting exports
 var transports = require('./lib/transports')
@@ -27,15 +27,8 @@ var exports = module.exports = function startNotifier(opts, callback) {
   agenda.purge(function (err) {
     if (err) return callback && callback(err)
 
-    all({
-      dirname: __dirname + '/lib/events',
-      resolve: function initEvent(event) {
-        event({
-          agenda: agenda,
-          mongoUrl: mongoUrl
-        })
-      }
-    })
+    //initialize job processors
+    jobs(agenda, mongoUrl)
 
     agenda.on('start', function (job) {
       timing.start(job)
@@ -57,8 +50,6 @@ var exports = module.exports = function startNotifier(opts, callback) {
   })
 
   exports.notify = function notify(event, callback) {
-    // TODO: make agenda scheduling depend on jobs instead of always using `now`
-    agenda.now(event.event, event)
-    if (callback) callback()
+    jobs.process(event.event, event, callback)
   }
 }
