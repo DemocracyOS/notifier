@@ -14,7 +14,7 @@
   "templates.comment-reply.body": "Sinulla on uusi vastaus teitä argumentti",
   "templates.comment-reply.body2": "Ole hyvä ja <a href=\"URL\">klikkaa tästä</a> nähdä sen",
 
-  "templates.law-published.subject": "Uusi laki julkaistiin",
-  "templates.law-published.body": "Uusi laki julkaistiin:",
-  "templates.law-published.body2": "Ole hyvä ja <a href=\"URL\">klikkaa tästä</a> nähdä sen"
+  "templates.topic-published.subject": "Uusi laki julkaistiin",
+  "templates.topic-published.body": "Uusi laki julkaistiin:",
+  "templates.topic-published.body2": "Ole hyvä ja <a href=\"URL\">klikkaa tästä</a> nähdä sen"
 }

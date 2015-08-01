@@ -14,7 +14,7 @@
   "templates.comment-reply.body": "Tes unha nova resposta ao teu argumento.",
   "templates.comment-reply.body2": "Por favor <a href=\"URL\">fai click</a> para vela.",
 
-  "templates.law-published.subject": "Nova proposta publicada",
-  "templates.law-published.body": "Unha nova proposta foi publicada:",
-  "templates.law-published.body2": "Por favor <a href=\"URL\">fai click</a> para vela."
+  "templates.topic-published.subject": "Nova proposta publicada",
+  "templates.topic-published.body": "Unha nova proposta foi publicada:",
+  "templates.topic-published.body2": "Por favor <a href=\"URL\">fai click</a> para vela."
 }

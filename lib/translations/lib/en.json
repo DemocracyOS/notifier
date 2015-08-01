@@ -14,7 +14,7 @@
   "templates.comment-reply.body": "You have a new reply on you argument:",
   "templates.comment-reply.body2": "Please <a href=\"URL\">click here</a> to see it.",
 
-  "templates.law-published.subject": "New law published",
-  "templates.law-published.body": "A new law was published:",
-  "templates.law-published.body2": "Please <a href=\"URL\">click here</a> to see it."
+  "templates.topic-published.subject": "New topic published",
+  "templates.topic-published.body": "A new topic has been published:",
+  "templates.topic-published.body2": "Please <a href=\"URL\">click here</a> to see it."
 }
