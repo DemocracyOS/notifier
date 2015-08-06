@@ -1,4 +1,12 @@
 
+0.0.7 / 2015-08-06
+==================
+
+  * Add topic-published job handler
+  * Add topic voted job handler
+  * Add topic commented job handler
+  * Add .eslintrc file
+
 0.0.6 / 2015-08-01
 ==================
 
