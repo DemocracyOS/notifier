@@ -1,4 +1,9 @@
 
+0.0.8 / 2015-08-06
+==================
+
+  * Remove checking for 'done' being defined before calling it
+
 0.0.7 / 2015-08-06
 ==================
 
