@@ -1,18 +1,16 @@
-/**
- * Module dependencies.
- */
-
+var defaults = require('defaults-deep')
 var agenda = require('./lib/agenda')
 var timing = require('./lib/utils/timing')
-var log = require('debug')('democracyos:notifier')
 var jobs = require('./lib/jobs')
-
-// fix this with an var exports=module.exports =function and just rewriting exports
 var transports = require('./lib/transports')
 
-var defaults = {
+var log = require('debug')('democracyos:notifier')
+
+var defaultOpts = {
   mongoUrl: 'mongodb://localhost/DemocracyOS-dev',
   collection: 'notifierJobs',
+  organizationName: 'noreply@democracyos.org',
+  organizationEmail: 'The DemocracyOS team',
   mailer: {
     service: '',
     auth: {
@@ -23,12 +21,16 @@ var defaults = {
 }
 
 var exports = module.exports = function startNotifier(opts, callback) {
-  var mongoUrl = opts.mongoUrl || defaults.mongoUrl
-  var collection = opts.collection || defaults.collection
-  var mailer = opts.mailer || defaults.mailer
+  defaults(opts, defaultOpts)
 
-  agenda = agenda({db: {address: mongoUrl, collection: collection} })
-  transports = transports(mailer)
+  agenda = agenda({
+    db: {
+      address: opts.mongoUrl,
+      collection: opts.collection
+    }
+  })
+
+  transports = transports(opts)
 
   agenda.purge(function (err) {
     if (err) return callback && callback(err)

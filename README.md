@@ -9,10 +9,12 @@ Uses [NodeMailer](https://www.npmjs.com/package/nodemailer) package for email ha
 
 ```javascript
 var notifier = require('democracyos-notifier')({
-  service: 'sendgrid',
-  auth: {
-    user: 'fake-sendgrid-user!@sendgrid.com',
-    pass: 'fake-sendgrid-pass'
+  mailer: {
+    service: 'sendgrid',
+    auth: {
+      user: 'fake-sendgrid-user!@sendgrid.com',
+      pass: 'fake-sendgrid-pass'
+    }
   }
 })
 ```
@@ -21,10 +23,12 @@ var notifier = require('democracyos-notifier')({
 
 ```javascript
 var notifier = require('democracyos-notifier')({
-  service: 'gmail',
-  auth: {
-    user: 'fake-gmail-user!@gmail.com',
-    pass: 'fake-gmail-pass'
+  mailer: {
+    service: 'gmail',
+    auth: {
+      user: 'fake-gmail-user!@gmail.com',
+      pass: 'fake-gmail-pass'
+    }
   }
 })
 ```
