@@ -13,16 +13,22 @@ var transports = require('./lib/transports')
 var defaults = {
   mongoUrl: 'mongodb://localhost/DemocracyOS-dev',
   collection: 'notifierJobs',
-  mandrillToken: 'fake-mandrill-token',
+  mailer: {
+    service: '',
+    auth: {
+      user: '',
+      pass: ''
+    }
+  }
 }
 
 var exports = module.exports = function startNotifier(opts, callback) {
   var mongoUrl = opts.mongoUrl || defaults.mongoUrl
   var collection = opts.collection || defaults.collection
-  var mandrillToken = opts.mandrillToken || defaults.mandrillToken
+  var mailer = opts.mailer || defaults.mailer
 
   agenda = agenda({db: {address: mongoUrl, collection: collection} })
-  transports = transports({mandrillToken: mandrillToken})
+  transports = transports(mailer)
 
   agenda.purge(function (err) {
     if (err) return callback && callback(err)
