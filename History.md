@@ -1,4 +1,11 @@
 
+0.0.10 / 2015-08-25
+===================
+
+  * Replace mailchimp for nodemailer #6
+  * Fix missing opts reference
+  * Fix default options & add default sender
+
 0.0.9 / 2015-08-06
 ==================
 
