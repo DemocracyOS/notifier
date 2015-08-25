@@ -26,10 +26,11 @@
     "agenda": "^0.6.28",
     "async": "^1.4.0",
     "debug": "^2.2.0",
+    "defaults-deep": "^0.2.3",
     "jade": "^1.11.0",
     "moment": "2.9.0",
     "mongojs": "^1.2.1",
-    "node-mandrill": "^1.0.1",
+    "nodemailer": "^1.4.0",
     "require-all": "^1.1.0",
     "t-component": "^1.0.0"
   }
