@@ -36,7 +36,7 @@ var exports = module.exports = function startNotifier(opts, callback) {
     if (err) return callback && callback(err)
 
     //initialize job processors
-    jobs(agenda, mongoUrl)
+    jobs(agenda, opts.mongoUrl)
 
     agenda.on('start', function (job) {
       timing.start(job)
