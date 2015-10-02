@@ -32,6 +32,21 @@ var exports = module.exports = function startNotifier(opts, callback) {
 
   transports = transports(opts)
 
+  setTimeout(function verifyInitialization(){
+    if (!agenda._collection) {
+      log('initializing agenda...')
+      return setTimeout(verifyInitialization, 100)
+    }
+    log('agenda initialized.')
+    init(opts, callback)
+  }, 100)
+
+  exports.notify = function notify(event, callback) {
+    jobs.process(event.event, event, callback)
+  }
+}
+
+function init(opts, callback){
   agenda.purge(function (err) {
     if (err) return callback && callback(err)
 
@@ -49,15 +64,10 @@ var exports = module.exports = function startNotifier(opts, callback) {
     })
 
     agenda.on('fail', function (err, job) {
-      log('Job \'%s\' failed - reason: %s',job.attrs.name, err)
+      log('Job \'%s\' failed - reason: %s', job.attrs.name, err)
     })
 
     agenda.start()
-
     if (callback) return callback()
   })
-
-  exports.notify = function notify(event, callback) {
-    jobs.process(event.event, event, callback)
-  }
 }
