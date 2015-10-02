@@ -1,3 +1,7 @@
+0.0.12 / 2015-10-02
+===================
+
+  * Using democracyos/agenda because npm version is outdated and does not work with MongoLab
 
 0.0.10 / 2015-08-25
 ===================
