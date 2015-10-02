@@ -64,7 +64,7 @@ function init(opts, callback){
     })
 
     agenda.on('fail', function (err, job) {
-      log('Job \'%s\' failed - reason: %s',job.attrs.name, err)
+      log('Job \'%s\' failed - reason: %s', job.attrs.name, err)
     })
 
     agenda.start()
