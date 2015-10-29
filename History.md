@@ -1,3 +1,11 @@
+
+0.0.14 / 2015-10-29
+==================
+
+ * Force disable the topic-published action treatment
+ * update mongojs and authentication method
+ * update agenda
+
 0.0.12 / 2015-10-02
 ===================
 
