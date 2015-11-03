@@ -4,7 +4,7 @@
   "description": "Notifications engine with job queuing and scheduling backed by MongoDB.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -33,5 +33,9 @@
     "nodemailer": "^1.4.0",
     "require-all": "^1.1.0",
     "t-component": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "mocha": "^2.3.3"
   }
 }
