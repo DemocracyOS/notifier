@@ -1,4 +1,10 @@
 
+0.0.15 / 2015-11-03
+===================
+
+  * Fix locale on comment-reply email
+  * Added ability to send notifications in the language of the target user
+
 0.0.14 / 2015-10-29
 ==================
 
