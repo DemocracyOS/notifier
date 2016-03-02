@@ -9,6 +9,7 @@ var log = require('debug')('democracyos:notifier')
 var defaultOpts = {
   mongoUrl: 'mongodb://localhost/DemocracyOS-dev',
   collection: 'notifierJobs',
+  fallbackLanguage: 'en',
   organizationName: 'noreply@democracyos.org',
   organizationEmail: 'The DemocracyOS team',
   mailer: {
