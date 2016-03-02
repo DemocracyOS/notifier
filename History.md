@@ -1,4 +1,9 @@
 
+1.0.1 / 2016-03-02
+==================
+
+  * Correctly fallback missing translations to English
+
 0.0.16 / 2016-02-03
 ===================
 
