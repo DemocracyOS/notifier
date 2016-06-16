@@ -17,11 +17,12 @@ var defaultOpts = {
     auth: {
       user: '',
       pass: ''
-    }
+    },
+    nodemailer: {}
   }
 }
 
-var exports = module.exports = function startNotifier(opts, callback) {
+var exports = module.exports = function startNotifier (opts, callback) {
   defaults(opts, defaultOpts)
 
   agenda = agenda({
@@ -33,7 +34,7 @@ var exports = module.exports = function startNotifier(opts, callback) {
 
   transports = transports(opts)
 
-  setTimeout(function verifyInitialization(){
+  setTimeout(function verifyInitialization () {
     if (!agenda._collection) {
       log('initializing agenda...')
       return setTimeout(verifyInitialization, 100)
@@ -42,16 +43,16 @@ var exports = module.exports = function startNotifier(opts, callback) {
     init(opts, callback)
   }, 100)
 
-  exports.notify = function notify(event, callback) {
+  exports.notify = function notify (event, callback) {
     jobs.process(event.event, event, callback)
   }
 }
 
-function init(opts, callback){
+function init (opts, callback) {
   agenda.purge(function (err) {
     if (err) return callback && callback(err)
 
-    //initialize job processors
+    // initialize job processors
     jobs(agenda, opts.mongoUrl)
 
     agenda.on('start', function (job) {
