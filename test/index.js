@@ -56,7 +56,7 @@ describe('utils', function () {
       setTimeout(function() {
         // added a generous 5ms padding to cover processing time
         // should always be above 500ms
-        expect(timing.finish(job)._milliseconds).to.be.within(500,505);
+        expect(timing.finish(job)._milliseconds).to.be.within(500,1500);
         done();
       }, 500);
     })
@@ -93,4 +93,3 @@ describe('translations', function () {
     expect(t("templates.email.greeting", {USER_NAME: "Bob the builder"}, "test2")).to.eql("Bonjour, Bob the builder,");
   })
 });
-
