@@ -2,6 +2,20 @@
   "mongoUrl": "mongodb://localhost/DemocracyOS-dev",
   "collection": "notifierJobs",
   "defaultLocale": "en",
+  "availableLocales": [
+    "ca",
+    "de",
+    "en",
+    "es",
+    "fi",
+    "fr",
+    "gl",
+    "it",
+    "nl",
+    "pt",
+    "ru",
+    "uk"
+  ],
   "organizationName": "noreply@democracyos.org",
   "organizationEmail": "The DemocracyOS team",
   "mailer": {
