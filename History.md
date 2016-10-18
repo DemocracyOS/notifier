@@ -1,4 +1,12 @@
 
+1.1.0 / 2016-10-18
+==================
+
+  * Add generic config for nodemailer
+  * Add availableLocales config option
+  * Refactor configuration on its own module
+  * Add unit tests #25 thanks @SebastienDaniel!
+
 1.0.1 / 2016-03-02
 ==================
 
