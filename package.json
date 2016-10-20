@@ -24,15 +24,15 @@
   "homepage": "https://github.com/DemocracyOS/notifier",
   "dependencies": {
     "agenda": "DemocracyOS/agenda",
-    "async": "^1.4.0",
-    "debug": "^2.2.0",
-    "defaults-deep": "^0.2.3",
+    "async": "1.4.0",
+    "debug": "2.2.0",
+    "defaults-deep": "0.2.3",
     "pug": "2.0.0-beta6",
     "moment": "2.9.0",
-    "mongojs": "^2.4.0",
+    "mongojs": "2.4.0",
     "nodemailer": "2.6.4",
     "require-all": "2.0.0",
-    "t-component": "^1.0.0"
+    "t-component": "1.0.0"
   },
   "devDependencies": {
     "chai": "^3.4.0",
