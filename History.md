@@ -1,4 +1,9 @@
 
+1.1.2 / 2016-10-24
+==================
+
+  * Fix notifier crash because of authMechanism
+
 1.1.1 / 2016-10-19
 ==================
 
