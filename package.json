@@ -28,7 +28,7 @@
     "debug": "2.2.0",
     "defaults-deep": "0.2.3",
     "pug": "2.0.0-beta6",
-    "moment": "2.9.0",
+    "moment": "2.15.2",
     "mongojs": "2.4.0",
     "nodemailer": "2.6.4",
     "require-all": "2.0.0",
