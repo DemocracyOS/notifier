@@ -1,4 +1,10 @@
 
+1.1.3 / 2016-11-04
+==================
+
+  * fix defaulting to directTransport email sender
+  * Fix for the ReDOS vulnerability #29
+
 1.1.2 / 2016-10-24
 ==================
 
