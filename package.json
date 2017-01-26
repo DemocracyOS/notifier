@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/DemocracyOS/notifier",
   "dependencies": {
-    "agenda": "DemocracyOS/agenda",
+    "agenda": "~0.9.0",
     "async": "~2.1.4",
     "debug": "~2.6.0",
     "defaults-deep": "0.2.3",
