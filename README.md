@@ -1,4 +1,6 @@
 # DemocracyOS Notifier
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/DemocracyOS/notifier.svg)](https://greenkeeper.io/)
 Embeddable notifications engine that relies on MongoDB for job queuing and scheduling. Powered by rschmukler/agenda
 
 ## Mailer Configuration
