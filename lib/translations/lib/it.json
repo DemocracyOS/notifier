@@ -6,9 +6,9 @@
   "templates.welcome-email.body": "Per favore <a href=\"VALIDATE_MAIL_URL\">clicca qui</a> per convalidare l'email.",
   "templates.welcome-email.ps": "P.S.: se non hai firmato in Democracyos preghiamo di ignorare questa email.",
 
-  "templates.reset-password.subject": "Reimpostare la password",
-  "templates.reset-password.body": "Per favore <a href=\"RESET_PASSWORD_URL\">clicca qui</a> per reimpostare la password",
-  "templates.reset-password.ps": "P.S.: se non hai richiesto di reimpostare la password, ignorare questa email",
+  "templates.forgot-password.subject": "Reimpostare la password",
+  "templates.forgot-password.body": "Per favore <a href=\"RESET_PASSWORD_URL\">clicca qui</a> per reimpostare la password",
+  "templates.forgot-password.ps": "P.S.: se non hai richiesto di reimpostare la password, ignorare questa email",
 
   "templates.comment-reply.subject": "Qualcuno ha risposto al tuo argomento",
   "templates.comment-reply.body": "Hai una nuova risposta su di voi argomento",

@@ -6,9 +6,9 @@
   "templates.welcome-email.body": "Por favor <a href=\"VALIDATE_MAIL_URL\">clique aqui</a> para validar seu endereço de e-mail.",
   "templates.welcome-email.ps": "Se você não se cadastrou, por favor ignore este e-mail.",
 
-  "templates.reset-password.subject": "Configurar nova senha",
-  "templates.reset-password.body": "Por favor, <a href=\"RESET_PASSWORD_URL\">clique aqui</a> para configurar nova senha.",
-  "templates.reset-password.ps": "Se você não solicitou criar uma nova senha, por favor ignore este e-mail",
+  "templates.forgot-password.subject": "Configurar nova senha",
+  "templates.forgot-password.body": "Por favor, <a href=\"RESET_PASSWORD_URL\">clique aqui</a> para configurar nova senha.",
+  "templates.forgot-password.ps": "Se você não solicitou criar uma nova senha, por favor ignore este e-mail",
 
   "templates.comment-reply.subject": "Alguém respondeu ao seu argumento",
   "templates.comment-reply.body": "Você tem uma nova resposta em você argumento:",

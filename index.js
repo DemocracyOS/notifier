@@ -6,7 +6,9 @@ var config = require('./lib/config')
 
 var log = require('debug')('democracyos:notifier')
 
-var exports = module.exports = function startNotifier(opts, callback) {
+var exports = module.exports = function startNotifier (opts, callback) {
+  var inited = false
+
   config.set(opts)
 
   agenda = agenda({
@@ -18,26 +20,40 @@ var exports = module.exports = function startNotifier(opts, callback) {
 
   transports()
 
-  setTimeout(function verifyInitialization(){
-    if (!agenda._collection) {
-      log('initializing agenda...')
-      return setTimeout(verifyInitialization, 100)
-    }
-    log('agenda initialized.')
-    init(callback)
-  }, 100)
+  agenda.on('ready', () => {
+    init((err) => {
+      log('agenda initialized.')
+      inited = true
 
-  exports.notify = function notify(event, callback) {
+      if (callback) {
+        return callback(err)
+      }
+    })
+  })
+
+  agenda.on('error', (err) => {
+    // throw the error to crash if the server is already started
+    if (inited) throw err
+
+    if (callback) {
+      return callback(err)
+    }
+  })
+
+  exports.notify = function notify (event, callback) {
     jobs.process(event.event, event, callback)
   }
 }
 
-function init(callback){
+function init (callback) {
   agenda.purge(function (err) {
-    if (err) return callback && callback(err)
+    if (err) {
+      if (callback) callback(err)
+      return
+    }
 
     // initialize job processors
-    jobs(agenda, config.get('mongoUrl'))
+    jobs.init(agenda)
 
     agenda.on('start', function (job) {
       timing.start(job)
@@ -54,6 +70,9 @@ function init(callback){
     })
 
     agenda.start()
-    if (callback) return callback()
+
+    if (callback) {
+      return callback()
+    }
   })
 }

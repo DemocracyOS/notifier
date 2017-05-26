@@ -6,9 +6,9 @@
   "templates.welcome-email.body": "Ole hyvä <a href=\"VALIDATE_MAIL_URL\">klikkaa tästä</a> vahvistaaksesi email-osoitteesi.",
   "templates.welcome-email.ps": "Jos et rekisteröitynyt, älä huomioi tätä viestiä.",
 
-  "templates.reset-password.subject": "Vaaditaan salasanan päivitys",
-  "templates.reset-password.body": "Ole hyvä <a href=\"RESET_PASSWORD_URL\">klikkaa tästä</a> vaihtaaksesi salasanasi",
-  "templates.reset-password.ps": "Jos et pyytänyt salasanan uusintaa, älä huomioi tätä viestiä.",
+  "templates.forgot-password.subject": "Vaaditaan salasanan päivitys",
+  "templates.forgot-password.body": "Ole hyvä <a href=\"RESET_PASSWORD_URL\">klikkaa tästä</a> vaihtaaksesi salasanasi",
+  "templates.forgot-password.ps": "Jos et pyytänyt salasanan uusintaa, älä huomioi tätä viestiä.",
 
   "templates.comment-reply.subject": "Joku vastasi perustelunne",
   "templates.comment-reply.body": "Sinulla on uusi vastaus teitä argumentti",
