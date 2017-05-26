@@ -1,4 +1,10 @@
 
+1.4.0 / 2017-05-25
+==================
+
+  * Add jobs.define method and refactor
+  * Add cache for DB connection
+
 1.3.1 / 2017-04-21
 ==================
 
