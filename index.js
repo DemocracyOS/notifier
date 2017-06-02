@@ -1,10 +1,10 @@
+var debug = require('debug')
 var agenda = require('./lib/agenda')
-var timing = require('./lib/utils/timing')
 var jobs = require('./lib/jobs')
 var transports = require('./lib/transports')
 var config = require('./lib/config')
 
-var log = require('debug')('democracyos:notifier')
+var log = debug('democracyos:notifier')
 
 var exports = module.exports = function startNotifier (opts, callback) {
   var inited = false
@@ -56,13 +56,11 @@ function init (callback) {
     jobs.init(agenda)
 
     agenda.on('start', function (job) {
-      timing.start(job)
       log('Job \'%s\' started', job.attrs.name)
     })
 
     agenda.on('success', function (job) {
-      var duration = timing.finish(job)
-      log('Job \'%s\' completed - duration: %s', job.attrs.name, duration.asMilliseconds())
+      log('Job \'%s\' completed', job.attrs.name)
     })
 
     agenda.on('fail', function (err, job) {

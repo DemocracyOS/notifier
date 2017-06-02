@@ -39,28 +39,6 @@ describe('utils', function () {
      })
      */
   })
-
-  describe(".timing", function() {
-    var timing = require("../lib/utils/timing");
-
-    it("should return the duration of an operation", function(done) {
-      var job = {
-        attrs: {
-          name: "job1",
-          _id: 1234
-        }
-      };
-
-      timing.start(job);
-
-      setTimeout(function() {
-        // added a generous 5ms padding to cover processing time
-        // should always be above 500ms
-        expect(timing.finish(job)._milliseconds).to.be.within(500,1500);
-        done();
-      }, 500);
-    })
-  })
 });
 
 describe('translations', function () {
