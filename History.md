@@ -1,4 +1,12 @@
 
+1.5.0 / 2017-06-02
+==================
+
+  * Remove timing function with moment dependency
+  * Remove feeds collection connection
+  * Remove update-feed, topic-voted, and topic-commented Jobs
+  * Add eslint-config-democracyos
+
 1.4.0 / 2017-05-25
 ==================
 
