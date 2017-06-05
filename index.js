@@ -1,5 +1,8 @@
 const config = require('./lib/config')
 
+// Load translations
+require('./lib/translations')
+
 /**
  * Notifier Init
  * Initialize async dependencies, including DB connection, jobs, etc

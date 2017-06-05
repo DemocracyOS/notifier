@@ -26,10 +26,10 @@
     "agenda": "~0.9.0",
     "debug": "~2.6.0",
     "defaults-deep": "0.2.3",
+    "es6-string-html-template": "~1.0.2",
     "mongodb": "~2.2.28",
     "mongojs": "2.4.0",
     "nodemailer": "~2.7.2",
-    "pug": "2.0.0-beta8",
     "require-all": "~2.1.0",
     "t-component": "1.0.0"
   },
