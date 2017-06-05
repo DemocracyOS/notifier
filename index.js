@@ -1,17 +1,19 @@
 var debug = require('debug')
-var agenda = require('./lib/agenda')
+var Agenda = require('agenda')
 var jobs = require('./lib/jobs')
 var transports = require('./lib/transports')
 var config = require('./lib/config')
 
 var log = debug('democracyos:notifier')
 
+var agenda
+
 var exports = module.exports = function startNotifier (opts, callback) {
   var inited = false
 
   config.set(opts)
 
-  agenda = agenda({
+  agenda = new Agenda({
     db: {
       address: config.get('mongoUrl'),
       collection: config.get('collection')
