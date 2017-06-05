@@ -46,14 +46,14 @@ var exports = module.exports = function startNotifier (opts, callback) {
 }
 
 function init (callback) {
+  // initialize job processors
+  jobs.init(agenda)
+
   agenda.purge(function (err) {
     if (err) {
       if (callback) callback(err)
       return
     }
-
-    // initialize job processors
-    jobs.init(agenda)
 
     agenda.on('start', function (job) {
       log('Job \'%s\' started', job.attrs.name)
