@@ -1,78 +1,51 @@
-var debug = require('debug')
-var Agenda = require('agenda')
-var jobs = require('./lib/jobs')
-var transports = require('./lib/transports')
-var config = require('./lib/config')
+const config = require('./lib/config')
 
-var log = debug('democracyos:notifier')
+/**
+ * Notifier Init
+ * Initialize async dependencies, including DB connection, jobs, etc
+ *
+ * @method init
+ * @return {Notifier}
+ */
 
-var agenda
-
-var exports = module.exports = function startNotifier (opts, callback) {
-  var inited = false
-
-  config.set(opts)
-
-  agenda = new Agenda({
-    db: {
-      address: config.get('mongoUrl'),
-      collection: config.get('collection')
-    }
-  })
-
-  transports()
-
-  agenda.on('ready', () => {
-    init((err) => {
-      log('agenda initialized.')
-      inited = true
-
-      if (callback) {
-        return callback(err)
-      }
-    })
-  })
-
-  agenda.on('error', (err) => {
-    // throw the error to crash if the server is already started
-    if (inited) throw err
-
-    if (callback) {
-      return callback(err)
-    }
-  })
-
-  exports.notify = function notify (event, callback) {
-    jobs.process(event.event, event, callback)
-  }
+module.exports.init = function init () {
+  return Promise.all([
+    require('./lib/db'),
+    require('./lib/agenda'),
+    require('./lib/email')
+  ]).then(([db, agenda]) => {
+    module.exports.db = db
+    module.exports.agenda = agenda
+  }).catch((err) => { throw err })
 }
 
-function init (callback) {
-  // initialize job processors
-  jobs.init(agenda)
+/**
+ * Expose config, this allows the overriding of any config option.
+ * @return {Config}
+ */
 
-  agenda.purge(function (err) {
-    if (err) {
-      if (callback) callback(err)
-      return
-    }
+module.exports.config = config
 
-    agenda.on('start', function (job) {
-      log('Job \'%s\' started', job.attrs.name)
-    })
+/**
+ * Expose db connection using mongojs
+ * Will be defined after the call of init()
+ * @return {MongoJS}
+ */
 
-    agenda.on('success', function (job) {
-      log('Job \'%s\' completed', job.attrs.name)
-    })
+module.exports.db = null
 
-    agenda.on('fail', function (err, job) {
-      log('Job \'%s\' failed - reason: %s', job.attrs.name, err)
-    })
+/**
+ * Expose Agenda instance
+ * Will be defined after the call of init()
+ * @return {Agenda}
+ */
 
-    agenda.start()
+module.exports.agenda = null
 
-    if (callback) {
-      return callback()
-    }
-  })
-}
+/**
+ * Email sender utility
+ * Will be defined after the call of init()
+ * @return {Agenda}
+ */
+
+module.exports.email = null
