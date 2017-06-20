@@ -1,3 +1,5 @@
+/* eslint-disable no-process-exit */
+
 const config = require('./lib/config')
 const notifier = require('.')
 
