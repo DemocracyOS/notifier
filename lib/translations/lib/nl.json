@@ -1,20 +1,20 @@
 {
-  "templates.email.greeting": "Hoi, USER_NAME,",
+  "templates.email.greeting": "Hoi, {userName},",
   "templates.email.signature": "De DemocracyOS groep.",
 
   "templates.welcome-email.subject": "Welkom bij DemocracyOS!",
-  "templates.welcome-email.body": "<a href=\"VALIDATE_MAIL_URL\">Klik hier</a> om je e-mail adres te bevestigen.",
+  "templates.welcome-email.body": "<a href=\"{validateUrl}\">Klik hier</a> om je e-mail adres te bevestigen.",
   "templates.welcome-email.ps": "Als je je niet hebt aangemeld, kun je deze e-mail negeren.",
 
   "templates.forgot-password.subject": "Wachtwoord herstellen aangevraagd",
-  "templates.forgot-password.body": "<a href=\"RESET_PASSWORD_URL\">Klik hier</a> om je wachtwoord opnieuw in te stellen.",
+  "templates.forgot-password.body": "<a href=\"{resetPasswordUrl}\">Klik hier</a> om je wachtwoord opnieuw in te stellen.",
   "templates.forgot-password.ps": "Als je niet gevraagd hebt om je wachtwoord opnieuw in te stellen, kun je deze e-mail negeren.",
 
   "templates.comment-reply.subject": "Iemand beantwoord je betoog",
   "templates.comment-reply.body": "U heeft een nieuw antwoord op je argument:",
-  "templates.comment-reply.body2": "<a href=\"URL\">Klik hier</a> om het te zien.",
+  "templates.comment-reply.body2": "<a href=\"{url}\">Klik hier</a> om het te zien.",
 
   "templates.topic-published.subject": "Nieuwe wet gepubliceerd",
   "templates.topic-published.body": "Een nieuwe wet werd gepubliceerd:",
-  "templates.topic-published.body2": "<a href=\"URL\">Klik hier</a> om het te zien."
+  "templates.topic-published.body2": "<a href=\"{url}\">Klik hier</a> om het te zien."
 }

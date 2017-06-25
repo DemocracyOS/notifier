@@ -1,20 +1,20 @@
 {
-  "templates.email.greeting": "Ciao, USER_NAME,",
+  "templates.email.greeting": "Ciao, {userName},",
   "templates.email.signature": "La squadra di DemocracyOS.",
 
   "templates.welcome-email.subject": "Benvenuto a DemocracyOS!",
-  "templates.welcome-email.body": "Per favore <a href=\"VALIDATE_MAIL_URL\">clicca qui</a> per convalidare l'email.",
+  "templates.welcome-email.body": "Per favore <a href=\"{validateUrl}\">clicca qui</a> per convalidare l'email.",
   "templates.welcome-email.ps": "P.S.: se non hai firmato in Democracyos preghiamo di ignorare questa email.",
 
   "templates.forgot-password.subject": "Reimpostare la password",
-  "templates.forgot-password.body": "Per favore <a href=\"RESET_PASSWORD_URL\">clicca qui</a> per reimpostare la password",
+  "templates.forgot-password.body": "Per favore <a href=\"{resetPasswordUrl}\">clicca qui</a> per reimpostare la password",
   "templates.forgot-password.ps": "P.S.: se non hai richiesto di reimpostare la password, ignorare questa email",
 
   "templates.comment-reply.subject": "Qualcuno ha risposto al tuo argomento",
   "templates.comment-reply.body": "Hai una nuova risposta su di voi argomento",
-  "templates.comment-reply.body2": "Si prega di <a href=\"URL\">cliccare qui</a> per vederlo",
+  "templates.comment-reply.body2": "Si prega di <a href=\"{url}\">cliccare qui</a> per vederlo",
 
   "templates.topic-published.subject": "Nuova legge pubblicato",
   "templates.topic-published.body": "Una nuova legge è stata pubblicata:",
-  "templates.topic-published.body2": "Si prega di <a href=\"URL\">cliccare qui</a> per vederlo"
+  "templates.topic-published.body2": "Si prega di <a href=\"{url}\">cliccare qui</a> per vederlo"
 }

@@ -1,20 +1,20 @@
 {
-  "templates.email.greeting": "Hola, USER_NAME.",
+  "templates.email.greeting": "Hola, {userName}.",
   "templates.email.signature": "L'equip de DemocracyOS.",
 
   "templates.welcome-email.subject": "Benvinguts/des a DemocracyOS!",
-  "templates.welcome-email.body": "Si us plau <a href=\"VALIDATE_MAIL_URL\">cliqui aquí</a> per validar la teva adreça de correu electrònic.",
+  "templates.welcome-email.body": "Si us plau <a href=\"{validateUrl}\">cliqui aquí</a> per validar la teva adreça de correu electrònic.",
   "templates.welcome-email.ps": "P.D.: Si no has creat un compte a DemocracyOS, si us plau ignora aquest correu.",
 
   "templates.forgot-password.subject": "Generar una nova contrasenya",
-  "templates.forgot-password.body": "Si us plau, <a href=\"RESET_PASSWORD_URL\">cliqui aquí</a> per generar la teva contrasenya",
+  "templates.forgot-password.body": "Si us plau, <a href=\"{resetPasswordUrl}\">cliqui aquí</a> per generar la teva contrasenya",
   "templates.forgot-password.ps": "P.D.: Si no has generat la teva contrasenya, si us plau ignora aquest correu",
 
   "templates.comment-reply.subject": "Algú va respondre al seu argument",
   "templates.comment-reply.body": "Vostè té una nova resposta en que l'argument",
-  "templates.comment-reply.body2": "Si us plau, <a href=\"URL\">cliqui aquí</a> per veure-ho",
+  "templates.comment-reply.body2": "Si us plau, <a href=\"{url}\">cliqui aquí</a> per veure-ho",
 
   "templates.topic-published.subject": "Nova llei publicada",
   "templates.topic-published.body": "Una nova llei va ser publicada:",
-  "templates.topic-published.body2": "Si us plau, <a href=\"URL\">cliqui aquí</a> per veure-ho"
+  "templates.topic-published.body2": "Si us plau, <a href=\"{url}\">cliqui aquí</a> per veure-ho"
 }
