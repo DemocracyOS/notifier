@@ -16,8 +16,8 @@
     "ru",
     "uk"
   ],
-  "organizationName": "noreply@democracyos.org",
-  "organizationEmail": "The DemocracyOS team",
+  "organizationName": "The DemocracyOS team",
+  "organizationEmail": "noreply@democracyos.org",
   "mailer": {
     "service": "",
     "auth": {

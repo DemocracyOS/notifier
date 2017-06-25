@@ -31,6 +31,7 @@
     "monk": "~6.0.0",
     "node-graceful": "~0.2.3",
     "nodemailer": "~2.7.2",
+    "pify": "~3.0.0",
     "require-all": "~2.1.0",
     "t-component": "1.0.0"
   },

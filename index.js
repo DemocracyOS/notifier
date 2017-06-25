@@ -1,4 +1,5 @@
 const Graceful = require('node-graceful')
+const pify = require('pify')
 const config = require('./lib/config')
 
 // Load translations
@@ -17,12 +18,24 @@ const notifier = module.exports = {}
 notifier.init = function init () {
   return Promise.all([
     require('./lib/db'),
+    require('./lib/mailer'),
     require('./lib/agenda')
-  ]).then(([db, agenda]) => {
+  ]).then(([db, mailer, agenda]) => {
     notifier.db = db
+    notifier.mailer = mailer
     notifier.agenda = agenda
 
-    return notifier
+    /**
+     * Promisified verions of Agenda#every, Agenda#schedule and
+     * Agenda#now methods
+     */
+    ;['every', 'schedule', 'now'].forEach((method) => {
+      notifier[method] = pify(agenda[method].bind(agenda))
+    })
+
+    return Promise.resolve(notifier)
+  }).then((notifier) => {
+    return require('./lib/jobs').init(notifier)
   }).catch((err) => { throw err })
 }
 
@@ -35,15 +48,13 @@ notifier.init = function init () {
  */
 
 notifier.start = function start () {
-  return notifier.init()
-    .then(require('./lib/agenda'))
-    .then((agenda) => {
-      agenda.start()
-      Graceful.on('exit', () => agenda.stop())
+  return notifier.init().then(() => {
+    notifier.agenda.start()
 
-      return notifier
-    })
-    .catch((err) => { throw err })
+    Graceful.on('exit', () => notifier.agenda.stop())
+
+    return Promise.resolve(notifier)
+  }).catch((err) => { throw err })
 }
 
 /**
@@ -71,7 +82,8 @@ notifier.agenda = null
 
 /**
  * Email sender utility
+ * Will be defined after the call of init()
  * @return {Mailer}
  */
 
-notifier.mailer = require('./lib/mailer')
+notifier.mailer = null
