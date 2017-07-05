@@ -30,15 +30,15 @@
     "mongodb": "~2.2.28",
     "monk": "~6.0.0",
     "node-graceful": "~0.2.3",
-    "nodemailer": "~2.7.2",
+    "nodemailer": "~4.0.1",
     "pify": "~3.0.0",
-    "require-all": "~2.1.0",
+    "require-all": "~2.2.0",
     "t-component": "1.0.0"
   },
   "devDependencies": {
-    "chai": "^3.4.0",
-    "eslint": "~3.19.0",
+    "chai": "~4.0.2",
+    "eslint": "~4.1.1",
     "eslint-config-democracyos": "~1.2.1",
-    "mocha": "~3.2.0"
+    "mocha": "~3.4.2"
   }
 }
