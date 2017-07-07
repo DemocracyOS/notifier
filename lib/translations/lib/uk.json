@@ -10,10 +10,6 @@
   "templates.forgot-password.body": "Будь ласка <a href=\"{resetPasswordUrl}\">натисніть сюди</a> щоб змінити Ваш пароль",
   "templates.forgot-password.ps": "PS: якщо Ви не намагалися змінити Ваш пароль, будь ласка не звертайте уваги на це повідомлення.",
 
-  "templates.comment-reply.subject": "Хтось відповів на Ваш аргумент",
-  "templates.comment-reply.body": "Хтось дав відповідь на Ваш аргумент:",
-  "templates.comment-reply.body2": "Будь ласка <a href=\"{url}\">натисніть сюди</a> щоб побачити її.",
-
   "templates.topic-published.subject": "Опубліковано новий закон",
   "templates.topic-published.body": "Новий закон був опублікований:",
   "templates.topic-published.body2": "Будь ласка <a href=\"{url}\">натисніть сюди</a> щоб побачити його."

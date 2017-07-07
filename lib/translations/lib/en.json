@@ -11,8 +11,6 @@
   "templates.forgot-password.ps": "PS: if you haven't requested to reset your password, please ignore this email",
 
   "templates.comment-reply.subject": "Someone replied to your argument",
-  "templates.comment-reply.body": "You have a new reply on you argument:",
-  "templates.comment-reply.body2": "Please <a href=\"{url}\">click here</a> to see it.",
 
   "templates.topic-published.subject": "New topic published",
   "templates.topic-published.body": "A new topic has been published:",
