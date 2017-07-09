@@ -14,8 +14,12 @@ const notifier = module.exports = {}
  * @return {Notifier}
  */
 
+let initialization = null
+
 notifier.init = function init () {
-  return Promise.all([
+  if (initialization) return initialization
+
+  initialization = Promise.all([
     require('./lib/db'),
     require('./lib/mailer'),
     require('./lib/agenda')
@@ -36,6 +40,8 @@ notifier.init = function init () {
   }).then((notifier) => {
     return require('./lib/jobs').init(notifier)
   }).catch((err) => { throw err })
+
+  return initialization
 }
 
 /**
