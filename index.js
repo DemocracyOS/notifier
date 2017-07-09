@@ -1,4 +1,3 @@
-const Graceful = require('node-graceful')
 const pify = require('pify')
 const config = require('./lib/config')
 
@@ -50,9 +49,6 @@ notifier.init = function init () {
 notifier.start = function start () {
   return notifier.init().then(() => {
     notifier.agenda.start()
-
-    Graceful.on('exit', () => notifier.agenda.stop())
-
     return Promise.resolve(notifier)
   }).catch((err) => { throw err })
 }
