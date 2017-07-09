@@ -1,3 +1,9 @@
+
+2.0.2 / 2017-07-09
+==================
+
+  * Fix graceful exit
+
 2.0.1 / 2017-07-09
 ==================
 
@@ -7,21 +13,7 @@
 2.0.0 / 2017-07-09
 ==================
 
-  * bump 2.0.0
-  * fix comment-reply email styles
-  * fix comment-reply job
-  * update topic-published job
-  * Fix topic-published job
-  * fix example
-  * fix translations
-  * fix job sending
-  * add monk in favor of mongojs
-  * add new interface
-  * refactor mail sender
-  * remove pug in favor of template literals
-  * add async interface for notifier
-  * remove useless agenda require
-  * fix initialize jobs before purge
+  * Complete notifier refactor 
 
 1.5.0 / 2017-06-02
 ==================
