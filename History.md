@@ -1,4 +1,10 @@
 
+2.0.1 / 2017-07-09
+==================
+
+  * Fix node-graceful for agenda
+  * Update author comparison
+
 1.5.0 / 2017-06-02
 ==================
 
