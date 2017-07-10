@@ -1,5 +1,6 @@
 const pify = require('pify')
 const config = require('./lib/config')
+const templates = require('./lib/templates')
 
 // Load translations
 require('./lib/translations')
@@ -65,6 +66,13 @@ notifier.start = function start () {
  */
 
 notifier.config = config
+
+/**
+ * Expose templates, this allows the overriding of any template.
+ * @return {Object}
+ */
+
+notifier.templates = templates
 
 /**
  * Expose db connection using mongojs
