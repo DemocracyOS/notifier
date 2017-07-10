@@ -1,6 +1,6 @@
 {
   "name": "democracyos-notifier",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Notifications engine with job queuing and scheduling backed by MongoDB.",
   "main": "index.js",
   "scripts": {
