@@ -11,6 +11,7 @@
   "templates.forgot-password.ps": "P.D.: si no solicitaste reestablecer tu contraseña, por favor ignora este correo",
 
   "templates.comment-reply.subject": "Alguien respondió a tu argumento",
+  "templates.new-comment.subject": "Un comentario en \"{topicTitle}\"",
 
   "templates.topic-published.subject": "Nuevo tema publicado",
   "templates.topic-published.body": "Un nuevo tema fue publicado:",

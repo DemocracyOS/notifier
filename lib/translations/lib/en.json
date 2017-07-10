@@ -11,6 +11,7 @@
   "templates.forgot-password.ps": "PS: if you haven't requested to reset your password, please ignore this email",
 
   "templates.comment-reply.subject": "Someone replied to your argument",
+  "templates.new-comment.subject": "New comment on \"{topicTitle}\"",
 
   "templates.topic-published.subject": "New topic published",
   "templates.topic-published.body": "A new topic has been published:",
