@@ -1,4 +1,11 @@
 
+2.1.0 / 2017-07-10
+==================
+
+  * Fix replies query
+  * Add new comment notification
+  * Expose templates
+
 2.0.3 / 2017-07-09
 ==================
 
