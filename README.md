@@ -1,4 +1,4 @@
-#DemocracyOS API Notifier
+# DemocracyOS API Notifier
 
 API Notifications with agenda and nodemailer
 
