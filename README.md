@@ -34,11 +34,11 @@ $ npm run dev
 ```
 
 Server will run on port 3000.
-At the moment, try make a request to 
+At the moment, try make a POST request to 
 ```sh
 /api/users
 ```
-send a request with this body structure
+with this body structure
 ```sh
 {
 	"username": "myusername"
