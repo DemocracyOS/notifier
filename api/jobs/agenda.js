@@ -1,15 +1,14 @@
 const Agenda = require('agenda');
 
-const { AGENDA_COLLECTION, MONGO_URL, JOB_TYPES } = process.env;
+const { MONGO_URL } = process.env;
 
-let agenda = new Agenda({
+const agenda = new Agenda({
   db: {
-    address: MONGO_URL,
-    collection: AGENDA_COLLECTION
+    address: MONGO_URL
   }
 });
 
-let jobTypes = JOB_TYPES ? JOB_TYPES.split(',') : [];
+const jobTypes = require('../../constants/jobs');
 
 jobTypes.forEach(type => {
   require(`./jobs/${type}`)(agenda);
