@@ -1,4 +1,3 @@
-const User = require('../../models/user');
 const mailer = require('../../../services/nodemailer');
 
 module.exports = agenda => {
@@ -26,8 +25,6 @@ module.exports = agenda => {
     };
 
     try {
-      //TODO send email      
-
       mailer.sendEmail(config, mailOptions);
     } catch (err) {
       done();

@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 require('dotenv').config();
 
-const userRoutes = require('./api/routes/users');
 const sendEmailRoutes = require('./api/routes/send-email');
 
 mongoose.connect(
@@ -16,11 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
-	// this example may be for some specific url
-	// res.header('Access-Control-Allow-Origin', 'http://localhost:4200')
 	res.header('Access-Control-Allow-Origin', '*');
-	// could be all, passing *
-	// res.header('Access-Control-Allow-Headers', '*');
 	res.header(
 		'Access-Control-Allow-Headers',
 		'Origin, X-Requested-Width, Content-Type, Accept, Authorization'
@@ -32,7 +27,6 @@ app.use((req, res, next) => {
 	next();
 });
 
-app.use('/api/users', userRoutes);
 app.use('/api/sendemail', sendEmailRoutes);
 
 app.use((req, res, next) => {
