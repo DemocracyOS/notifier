@@ -4,13 +4,13 @@ const mailer = require('../../../services/nodemailer');
 module.exports = agenda => {
   agenda.define('send welcome', async (job, done) => {
     const { email } = job.attrs.data;
-    const { 
-      NODEMAILER_SERVICE, 
+    const {
+      NODEMAILER_HOST,
       NODEMAILER_USER, 
       NODEMAILER_PASS } = process.env;
 
     const config = {
-      service: NODEMAILER_SERVICE,
+      host: NODEMAILER_HOST,
       auth: {
         user: NODEMAILER_USER,
         pass: NODEMAILER_PASS
