@@ -12,20 +12,13 @@ $ npm install
 - Set environment variables
 
 ```
-JOB_TYPES=jobNameTypes
 MONGO_URL='mongodb://<my-mongo-url>/<database-name>'
-AGENDA_COLLECTION=collectionName
 ORGANIZATION_EMAIL=your-organization@mail.com
 ORGANIZATION_NAME='My Organization'
-NODEMAILER_SERVICE=yourservicemail
+NODEMAILER_HOST=your.host.com
 NODEMAILER_PASS=yourservicemailpass
 NODEMAILER_USER=yourservice@mail.com
 ```
-
-For the JOB_TYPES variable you can set more than one comma separated
-Example: 'welcome-email,comment-reply, ...'
-
-For this example only "welcome-email" exist.
 
 ## ¡Run server, run!
 
@@ -35,13 +28,15 @@ $ npm run dev
 
 Server will run on port 3000.
 At the moment, try make a POST request to 
+
 ```sh
-/api/users
+/api/sendemail
 ```
+
 with this body structure
+
 ```sh
 {
-	"username": "myusername"
 	"email":"myemailaccount@mail.com"
 }
 ```
