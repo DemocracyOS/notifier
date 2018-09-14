@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 const userRoutes = require('./api/routes/users');
+const sendEmailRoutes = require('./api/routes/send-email');
 
 mongoose.connect(
 	process.env.MONGO_URL,
@@ -32,6 +33,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/api/users', userRoutes);
+app.use('/api/sendemail', sendEmailRoutes);
 
 app.use((req, res, next) => {
 	const error = new Error('Not found');
