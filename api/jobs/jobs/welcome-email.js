@@ -1,6 +1,7 @@
 const mailer = require('../../../services/nodemailer');
 
 module.exports = agenda => {
+  // TODO: maybe manage agenda.on('fail')
   agenda.define('send welcome', async (job, done) => {
     const { email } = job.attrs.data;
     const {
@@ -25,9 +26,9 @@ module.exports = agenda => {
     };
 
     try {
-      mailer.sendEmail(config, mailOptions);
+      mailer.sendEmail(config, mailOptions, done);
     } catch (err) {
-      done();
+      done(err);
     }
   });
 };

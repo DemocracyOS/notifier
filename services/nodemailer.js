@@ -1,11 +1,12 @@
 const nodemailer = require('nodemailer');
 
-module.exports.sendEmail = function(config, mailOptions) {
+module.exports.sendEmail = function sendEmail(config, mailOptions, done) {
   const transporter = nodemailer.createTransport(config);
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.log(error);
-      throw error;
+      done(error)
     }
+
+    done()
   });
 };
