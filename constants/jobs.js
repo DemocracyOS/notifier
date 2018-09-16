@@ -1,3 +1,3 @@
 module.exports = [
-  'welcome-email'
-]
+  'send-email'
+];
