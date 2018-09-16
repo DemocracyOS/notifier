@@ -50,3 +50,11 @@ with this body structure
 ```
 
 Currently there are three types of notifications: "comment-resolved", "comment-liked", "document-edited"
+
+## Testing
+
+For test the api, run
+
+```sh
+$ npm test
+```
