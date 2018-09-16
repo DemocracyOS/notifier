@@ -29,14 +29,30 @@ $ npm run dev
 Server will run on port 3000.
 At the moment, try make a POST request to 
 
-```sh
+```
 /api/sendemail
 ```
 
 with this body structure
 
-```sh
+```javascript
 {
-	"email":"myemailaccount@mail.com"
+	"type":"the-type",
+	"info": {
+		"to":"the-email-to@notify.com",
+		"document": {
+			"comment":"The original comment",
+			"title":"The document title",
+			"author":"The document author"
+		}
+	}
 }
+```
+
+Currently there are three types of notifications
+
+```javascript
+	"comment-resolved",
+	"comment-liked",
+	"document-edited",
 ```
