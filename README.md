@@ -49,10 +49,4 @@ with this body structure
 }
 ```
 
-Currently there are three types of notifications
-
-```javascript
-	"comment-resolved",
-	"comment-liked",
-	"document-edited",
-```
+Currently there are three types of notifications: "comment-resolved", "comment-liked", "document-edited"
