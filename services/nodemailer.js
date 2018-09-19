@@ -4,7 +4,7 @@ module.exports.sendEmail = function sendEmail(config, mailOptions, done) {
   const transporter = nodemailer.createTransport(config);
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      done(error);
+      return done(error);
     }
 
     done();
