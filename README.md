@@ -1,42 +1,60 @@
-# DemocracyOS Notifier
-Embeddable notifications engine that relies on MongoDB for job queuing and scheduling. Powered by rschmukler/agenda
+# DemocracyOS API Notifier
 
-## Mailer Configuration
+API Notifications with agenda and nodemailer
 
-Uses [NodeMailer](https://www.npmjs.com/package/nodemailer) package for email handling. Available services are the ones listed on the [nodemailer-wellknown](https://github.com/andris9/nodemailer-wellknown#supported-services) repo.
+## Configuration
+- Install dependencies
 
-### SendGrid Example
-
-```javascript
-var notifier = require('democracyos-notifier')({
-  mailer: {
-    service: 'sendgrid',
-    auth: {
-      user: 'fake-sendgrid-user!@sendgrid.com',
-      pass: 'fake-sendgrid-pass'
-    }
-  }
-})
+```sh
+$ npm install
 ```
 
-### Gmail Example
+- Set environment variables
 
-```javascript
-var notifier = require('democracyos-notifier')({
-  mailer: {
-    service: 'gmail',
-    auth: {
-      user: 'fake-gmail-user!@gmail.com',
-      pass: 'fake-gmail-pass'
-    }
-  }
-})
+```
+MONGO_URL='mongodb://<my-mongo-url>/<database-name>'
+ORGANIZATION_EMAIL=your-organization@mail.com
+ORGANIZATION_NAME='My Organization'
+NODEMAILER_HOST=your.host.com
+NODEMAILER_PASS=yourservicemailpass
+NODEMAILER_USER=yourservice@mail.com
 ```
 
-### Direct Transport Example
+## ¡Run server, run!
 
-Not recommended for `production`. Using direct transport is not reliable as outgoing port 25 used is often blocked by default. Additionally mail sent from dynamic addresses is often flagged as spam. You should really consider using a SMTP provider.
+```sh
+$ npm run dev
+```
+
+Server will run on port 3000.
+At the moment, try make a POST request to 
+
+```
+/api/sendemail
+```
+
+with this body structure
 
 ```javascript
-var notifier = require('democracyos-notifier')()
+{
+	"type":"the-type",
+	"info": {
+		"to":"the-email-to@notify.com",
+		"document": {
+			"comment":"The original comment",
+			"title":"The document title",
+			"author":"The document author"
+		}
+	}
+}
+```
+
+Currently there are three types of notifications: "comment-resolved", "comment-liked", "document-edited"
+
+## Testing
+
+For test the api, run
+
+```sh
+$ npm test
 ```
