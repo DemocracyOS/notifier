@@ -15,7 +15,7 @@
   "author": "Democracia en Red <speak@democracyos.org> (http://democraciaenred.org/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mendezdev/notifier/issues"
+    "url": "https://github.com/DemocracyOS/notifier/issues"
   },
   "homepage": "https://github.com/DemocracyOS/notifier",
   "dependencies": {
