@@ -20,7 +20,9 @@ const documentEdited = (info) => {
 }
 
 const commentLiked = (info) => {
-  const template = require('../templates/comment-liked')(info.document);
+  const CommentLikedTemplate = require('../react-templates/comment-liked');
+  const template = CommentLikedTemplate.default({...info.document})
+
   execute(info.to, '¡Comment Liked!', template);  
 }
 
