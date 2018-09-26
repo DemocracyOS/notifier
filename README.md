@@ -18,7 +18,18 @@ ORGANIZATION_NAME='My Organization'
 NODEMAILER_HOST=your.host.com
 NODEMAILER_PASS=yourservicemailpass
 NODEMAILER_USER=yourservice@mail.com
+NODE_ENV=production || development
 ```
+
+## React Templates
+
+Run
+
+```sh
+$ npm run build
+```
+
+To pre-build the templates for production purpose
 
 ## ¡Run server, run!
 
