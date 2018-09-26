@@ -23,13 +23,11 @@ NODE_ENV=production || development
 
 ## React Templates
 
-Run
+To pre-build the templates for production purpose, run
 
 ```sh
 $ npm run build
 ```
-
-To pre-build the templates for production purpose
 
 ## ¡Run server, run!
 
