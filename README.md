@@ -23,11 +23,13 @@ NODE_ENV=production || development
 
 ## React Templates
 
-To pre-build the templates for production purpose, run
+To pre-build the templates for production purpose, run:
 
 ```sh
 $ npm run build
 ```
+
+This will create a "dist/react-templates" folder for the pre-build templates.
 
 ## ¡Run server, run!
 
