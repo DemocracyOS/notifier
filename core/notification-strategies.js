@@ -1,6 +1,5 @@
 const agenda = require('../api/jobs/agenda');
 const { NODE_ENV } = process.env;
-console.log('env: ', NODE_ENV);
 
 const basePath = NODE_ENV === 'production' ? '../dist/react-templates' : '../react-templates';
 
@@ -17,7 +16,7 @@ const buildTemplate = (fileName, props) => {
   const path = `${basePath}/${fileName}`;
   const reactTemplate = require(path);
 
-  return reactTemplate.default({...props});
+  return reactTemplate({...props});
 }
 
 const commentResolved = (info) => {

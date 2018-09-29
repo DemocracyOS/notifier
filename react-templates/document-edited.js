@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDom from 'react-dom/server';
+const React = require('react');
+const ReactDom = require('react-dom/server');
 
 const DocumentEdited = (props) => {
   return (
@@ -17,4 +17,4 @@ const App = (props) => {
   return html;
 }
 
-export default App;
+module.exports = App;
