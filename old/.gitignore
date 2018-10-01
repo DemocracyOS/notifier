@@ -1,5 +1,0 @@
-.DS_Store
-*.sublime-*
-node_modules
-npm-debug.log
-/sandbox.js

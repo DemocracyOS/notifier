@@ -1,6 +1,0 @@
-{
-  "extends": ["democracyos"],
-  "rules": {
-    "promise/no-nesting": 0
-  }
-}
