@@ -20,8 +20,14 @@ if(jobTypes.length) {
   });
 }
 
-function graceful() {
-  agenda.stop(() => process.exit(0));
+async function graceful() {
+  console.log('Stopping agenda service...')
+  try {
+    await agenda.stop();
+    process.exit(0)
+  } catch (error) {
+    process.exit(1)
+  }  
 }
 
 process.on('SIGTERM', graceful)

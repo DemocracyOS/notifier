@@ -1,4 +1,7 @@
 const agenda = require('../api/jobs/agenda');
+const { NODE_ENV } = process.env;
+
+const basePath = NODE_ENV === 'production' ? '../dist/react-templates' : '../react-templates';
 
 const execute = (to, subject, template) => {
   const emailOptions = {
@@ -9,18 +12,25 @@ const execute = (to, subject, template) => {
   agenda.now('send-email', emailOptions)
 }
 
+const buildTemplate = (fileName, props) => {
+  const path = `${basePath}/${fileName}`;
+  const reactTemplate = require(path);
+
+  return reactTemplate({...props});
+}
+
 const commentResolved = (info) => {
-  const template = require('../templates/comment-resolved')(info.document);
-  execute(info.to, '¡Comment Resolved!', template);  
+  const template = buildTemplate('comment-resolved', info.document);
+  execute(info.to, 'Coment Resolved!', template);
 }
 
 const documentEdited = (info) => {
-  const template = require('../templates/document-edited')(info.document);
-  execute(info.to, '¡Documnet Edited!', template);
+  const template = buildTemplate('document-edited', info.document);
+  execute(info.to, 'Document Edited!', template);
 }
 
 const commentLiked = (info) => {
-  const template = require('../templates/comment-liked')(info.document);
+  const template = buildTemplate('comment-liked', info.document);  
   execute(info.to, '¡Comment Liked!', template);  
 }
 
