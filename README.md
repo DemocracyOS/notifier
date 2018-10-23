@@ -29,7 +29,7 @@ To pre-build the templates for production purpose, run:
 $ npm run build
 ```
 
-This will create a "dist/react-templates" folder for the pre-build templates.
+This will create a "dist/templates" folder for the pre-build templates.
 
 ## ¡Run server, run!
 

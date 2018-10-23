@@ -1,6 +1,7 @@
 version: "2"
 services:
   web:
+    command: [ "npm", "run", "dev" ]
     build: .
     ports:
     - "3000:3000"

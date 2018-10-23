@@ -2,12 +2,15 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+
 require('dotenv').config();
 
 const sendEmailRoutes = require('./api/routes/send-email');
 
+const { NODE_ENV, MONGO_URL } = process.env;
+
 mongoose.connect(
-	process.env.MONGO_URL,
+	MONGO_URL,
 	{ useNewUrlParser: true }
 );
 
@@ -28,6 +31,8 @@ app.use((req, res, next) => {
 });
 
 app.use('/api/sendemail', sendEmailRoutes);
+
+if (NODE_ENV != 'production') app.use('/views', require('./api/routes/dev-view'));
 
 app.use((req, res, next) => {
 	const error = new Error('Not found');

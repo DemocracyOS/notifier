@@ -1,7 +1,7 @@
 const agenda = require('../api/jobs/agenda');
 const { NODE_ENV } = process.env;
 
-const basePath = NODE_ENV === 'production' ? '../dist/react-templates' : '../react-templates';
+const basePath = NODE_ENV === 'production' ? '../dist/templates' : '../templates';
 
 const execute = (to, subject, template) => {
   const emailOptions = {
