@@ -4,9 +4,11 @@ services:
     command: [ "npm", "run", "dev" ]
     build: .
     ports:
-    - "3000:3000"
+      - "3000:3000"
     depends_on:
-    - mongo
+      - mongo
+    volumes:
+      - ./templates:/usr/src/app/templates
   mongo:
     image: mongo
     ports:
