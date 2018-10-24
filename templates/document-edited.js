@@ -1,5 +1,7 @@
 const React = require('react');
 const ReactDom = require('react-dom/server');
+const { Email, Item, Span, A, renderEmail } = require ('react-html-email');
+
 
 const DocumentEdited = (props) => {
   return (
