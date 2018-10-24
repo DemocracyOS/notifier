@@ -28,7 +28,8 @@
     "mongoose": "^5.2.14",
     "nodemailer": "^4.6.8",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-html-email": "^3.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
