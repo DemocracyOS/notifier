@@ -19,25 +19,31 @@ const buildTemplate = (fileName, props) => {
   return reactTemplate({...props});
 }
 
-const commentResolved = (info) => {
-  const template = buildTemplate('comment-resolved', info.document);
-  execute(info.to, 'Coment Resolved!', template);
-}
-
-const documentEdited = (info) => {
-  const template = buildTemplate('document-edited', info.document);
-  execute(info.to, 'Document Edited!', template);
+const commentRead = (info) => {
+  const template = buildTemplate('comment-read', info.document);
+  execute(info.to, '¡Coment Read!', template);
 }
 
 const commentLiked = (info) => {
-  const template = buildTemplate('comment-liked', info.document);  
-  execute(info.to, '¡Comment Liked!', template);  
+  const template = buildTemplate('comment-liked', info.document);
+  execute(info.to, '¡Comment Liked!', template);
+}
+
+const commentClosed = (info) => {
+  const template = buildTemplate('comment-closed', info.document);
+  execute(info.to, '¡Comment Closed!', template);
+}
+
+const commentContribution = (info) => {
+  const template = buildTemplate('comment-contribution', info.document);
+  execute(info.to, '¡Comment Contribution!', template);
 }
 
 const strategies = [
-  ['comment-resolved', commentResolved],
-  ['document-edited', documentEdited],
-  ['comment-liked', commentLiked]
+  ['comment-read', commentRead],
+  ['comment-liked', commentLiked],
+  ['comment-contribution', commentContribution],
+  ['comment-closed', commentClosed]
 ];
 
 const strategiesMap = new Map(strategies);
@@ -46,7 +52,7 @@ function sendEmail(type, info) {
   if (!strategiesMap.has(type)) {
     throw new Error("The type does'n exists.");
   }
-  
+
   strategiesMap.get(type)(info);
 };
 
