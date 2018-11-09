@@ -19,9 +19,9 @@ const buildTemplate = (fileName, props) => {
   return reactTemplate({...props});
 }
 
-const commentRead = (info) => {
-  const template = buildTemplate('comment-read', info.document);
-  execute(info.to, '¡Coment Read!', template);
+const commentResolved = (info) => {
+  const template = buildTemplate('comment-resolved', info.document);
+  execute(info.to, '¡Coment Resolved!', template);
 }
 
 const commentLiked = (info) => {
@@ -40,7 +40,7 @@ const commentContribution = (info) => {
 }
 
 const strategies = [
-  ['comment-read', commentRead],
+  ['comment-resolved', commentResolved],
   ['comment-liked', commentLiked],
   ['comment-contribution', commentContribution],
   ['comment-closed', commentClosed]
