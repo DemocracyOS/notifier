@@ -56,7 +56,7 @@ const CommentRead = (props) => {
                           <Item>
                             <Box style={{marginBottom: 91, marginLeft: 14}}>
                               <Item>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24.7" height="24.7" viewBox="0 0 24 24" fill="none" stroke="#7ed321" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline style={{border: "2 solid #7ed321"}} points="20 6 9 17 4 12"></polyline></svg>
+                                <Image src="https://complejoteatral.blob.core.windows.net/assets/check.png" />
                               </Item>
                             </Box>
                           </Item>
