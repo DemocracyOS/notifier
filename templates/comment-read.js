@@ -21,7 +21,7 @@ const mailStyle = {
   color: '#203340',
 }
 
-const CommentLiked = (props) => {
+const CommentRead = (props) => {
   return (
 
     <Email>
@@ -40,12 +40,12 @@ const CommentLiked = (props) => {
                   </Span>
                   <Box style={{marginTop: 30}}>
                     <Item>
-                      <Span {...mailStyle}>- El/la diputado/a xxxxx apoyó el comentario que realizó en la propuesta de ley regulación de contaminación sonora en propuestasabiertas.hcdn.gob.ar (link). Ingrese en propuestasabiertas.hcdn.gob.ar (link) para conocer y comentar en otros proyectos.</Span>
+                      <Span {...mailStyle}>- El/la diputado/a xxxxxxxxx  resolvió su comentario en la propuesta de ley regulación de contaminación sonora en propuestasabiertas.hcdn.gob.ar (link)</Span>
                     </Item>
                   </Box>
                   <Box style={{marginTop: 20}}>
                     <Item>
-                      <Span {...mailStyle}> Este fue tu comentario marcado como:</Span>
+                      <Span {...mailStyle}> Este fue tu comentario:</Span>
                     </Item>
                   </Box>
               </Item>
@@ -56,7 +56,8 @@ const CommentLiked = (props) => {
                           <Item>
                             <Box style={{marginBottom: 91, marginLeft: 14}}>
                               <Item>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5c97bc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-up"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>                              </Item>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24.7" height="24.7" viewBox="0 0 24 24" fill="none" stroke="#7ed321" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline style={{border: "2 solid #7ed321"}} points="20 6 9 17 4 12"></polyline></svg>
+                              </Item>
                             </Box>
                           </Item>
                         </Box>
@@ -80,6 +81,11 @@ const CommentLiked = (props) => {
                         </Box>
                 </Item>
               </Box>
+              <Box align='center' style={{width: 643, height: 136, marginLeft: 57}}>
+                <Item align='justify'>
+                  <Span align='justify'>Saludos cordiales,</Span>
+                </Item>
+              </Box>
 
               <Box align="center" style={{width: 700, height: 126, marginTop: 49, borderBottom: 'solid 1px #e9e9e9', backgroundColor: '#5c98bd'}}>
                 <Item>
@@ -95,4 +101,4 @@ const CommentLiked = (props) => {
   );
 }
 
-module.exports = (props) => renderEmail(<CommentLiked {...props}/>);
+module.exports = (props) => renderEmail(<CommentRead {...props}/>);
