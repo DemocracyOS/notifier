@@ -21,22 +21,22 @@ const buildTemplate = (fileName, props) => {
 
 const commentResolved = (info) => {
   const template = buildTemplate('comment-resolved', info.document);
-  execute(info.to, '¡Coment Resolved!', template);
+  execute(info.to, '¡Comentario resuelto!', template);
 }
 
 const commentLiked = (info) => {
   const template = buildTemplate('comment-liked', info.document);
-  execute(info.to, '¡Comment Liked!', template);
+  execute(info.to, '¡Comentario relevante!', template);
 }
 
 const commentClosed = (info) => {
   const template = buildTemplate('comment-closed', info.document);
-  execute(info.to, '¡Comment Closed!', template);
+  execute(info.to, '¡Propuesta cerrada!', template);
 }
 
 const commentContribution = (info) => {
   const template = buildTemplate('comment-contribution', info.document);
-  execute(info.to, '¡Comment Contribution!', template);
+  execute(info.to, '¡Comentario marcado como aporte!', template);
 }
 
 const strategies = [
