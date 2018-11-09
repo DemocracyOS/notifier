@@ -41,7 +41,7 @@ const CommentClosed = (props) => {
                   </Span>
                   <Box style={{marginTop: 30}}>
                     <Item>
-                      <Span {...mailStyle}>Hola Matías, Queremos contarte que la Propuesta Acceso a la Información Pública ha sido cerrada a comentarios y pronto podrás ver las el resumen de las participaciones y aportes que tuvo la misma.</Span>
+                      <Span {...mailStyle}>- Finalizó el periodo para realizar aportes en la propuesta de ley regulación de contaminación sonora en la que comentó. Ingrese en propuestasabiertas.hcdn.gob.ar (link) para ver la versión final y los resultados del proceso de co-creación de normas.</Span>
                     </Item>
                   </Box>
               </Item>
@@ -78,13 +78,7 @@ const CommentClosed = (props) => {
                 </Item>
               </Box>
 
-              <Box align="center" style={{width: 700, height: 136, border: 'solid 1px #e9e9e9', borderTop: 'none', borderBottom: 'none'}}>
-                <Item align="center" style={{height: 411}}>
-                  <Image src="https://picsum.photos/290/241" />
-                </Item>
-              </Box>
-
-              <Box align="center" style={{width: 700, height: 126, borderBottom: 'solid 1px #e9e9e9', backgroundColor: '#5c98bd'}}>
+              <Box align="center" style={{width: 700, height: 126, borderBottom: 'solid 1px #e9e9e9', backgroundColor: '#5c98bd', marginTop: 100}}>
                 <Item>
                   <Box align="center">
                     <Item align="center" style={{width: 535, height: 40, margin: 82, marginTop: 63}}>

@@ -40,7 +40,7 @@ const CommentRead = (props) => {
                   </Span>
                   <Box style={{marginTop: 30}}>
                     <Item>
-                      <Span {...mailStyle}>Queremos contarte que tu comentario en la Propuesta de Ley de Ganancias fue visto por el/la Diputadx. Podés seguir agregando más aportes que creas convenientes para seguir co-creando leyes entre todos.</Span>
+                      <Span {...mailStyle}>- El/la diputado/a xxxxxxxxx  resolvió su comentario en la propuesta de ley regulación de contaminación sonora en propuestasabiertas.hcdn.gob.ar (link)</Span>
                     </Item>
                   </Box>
                   <Box style={{marginTop: 20}}>
@@ -56,7 +56,7 @@ const CommentRead = (props) => {
                           <Item>
                             <Box style={{marginBottom: 91, marginLeft: 14}}>
                               <Item>
-                                <Image src="https://picsum.photos/22/22" style={{width: 22, height: 22}} />
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24.7" height="24.7" viewBox="0 0 24 24" fill="none" stroke="#7ed321" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline style={{border: "2 solid #7ed321"}} points="20 6 9 17 4 12"></polyline></svg>
                               </Item>
                             </Box>
                           </Item>
@@ -74,7 +74,7 @@ const CommentRead = (props) => {
                             <Span>Occupation</Span>
                           </Item>
                         </Box>
-                        <Box align="center" style={{marginLeft: 80, marginTop: 20, marginBottom: 58}}>
+                        <Box align="center" style={{marginLeft: 80, marginTop: 20, marginBottom: 22}}>
                           <Item>
                             <Span style={{fontSize: 14}}>{props.comment} Hola! Sugiero que aecenas pentesque, erat eget eleifend dictum, felis neque sodales erat, at tincidunt enim dui pulvinar neque. Gracias!</Span>
                           </Item>
@@ -84,11 +84,6 @@ const CommentRead = (props) => {
               <Box align='center' style={{width: 643, height: 136, marginLeft: 57}}>
                 <Item align='justify'>
                   <Span align='justify'>Saludos cordiales,</Span>
-                </Item>
-              </Box>
-              <Box align="center" style={{width: 700, height: 136}}>
-                <Item align="center" style={{height: 411}}>
-                  <Image src="https://picsum.photos/290/241" />
                 </Item>
               </Box>
 

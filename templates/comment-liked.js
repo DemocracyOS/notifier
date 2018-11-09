@@ -40,7 +40,7 @@ const CommentLiked = (props) => {
                   </Span>
                   <Box style={{marginTop: 30}}>
                     <Item>
-                      <Span {...mailStyle}>Queremos contarte que tu comentario en la Propuesta de Ley de Ganancias ha sido tomado como relevante.  Podés seguir agregando más aportes que creas convenientes para seguir co-creando leyes entre todos.</Span>
+                      <Span {...mailStyle}>- El/la diputado/a xxxxx apoyó el comentario que realizó en la propuesta de ley regulación de contaminación sonora en propuestasabiertas.hcdn.gob.ar (link). Ingrese en propuestasabiertas.hcdn.gob.ar (link) para conocer y comentar en otros proyectos.</Span>
                     </Item>
                   </Box>
                   <Box style={{marginTop: 20}}>
@@ -56,8 +56,7 @@ const CommentLiked = (props) => {
                           <Item>
                             <Box style={{marginBottom: 91, marginLeft: 14}}>
                               <Item>
-                                <Image src="https://picsum.photos/22/22" style={{width: 22, height: 22}} />
-                              </Item>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5c97bc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-up"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>                              </Item>
                             </Box>
                           </Item>
                         </Box>
@@ -79,12 +78,6 @@ const CommentLiked = (props) => {
                             <Span style={{fontSize: 14}}>{props.comment} Hola! Sugiero que aecenas pentesque, erat eget eleifend dictum, felis neque sodales erat, at tincidunt enim dui pulvinar neque. Gracias!</Span>
                           </Item>
                         </Box>
-                </Item>
-              </Box>
-
-              <Box align="center" style={{width: 700, height: 136}}>
-                <Item align="center" style={{height: 411}}>
-                  <Image src="https://picsum.photos/290/241" />
                 </Item>
               </Box>
 

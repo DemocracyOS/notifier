@@ -40,7 +40,7 @@ const CommentContribution = (props) => {
                   </Span>
                   <Box style={{marginTop: 30}}>
                     <Item>
-                      <Span {...mailStyle}>Queremos contarte que tu comentario en la Propuesta de Ley de Ganancias fue tomado como aporte y pronto te avisaremos cuando el documento haya sido publicado nuevamente.</Span>
+                      <Span {...mailStyle}>- El/la diputado/a xxx creó un nueva versión del propuesta de ley regulación de contaminación sonora y destacó su comentario como aporte. Para ver la nueva versión ingrese en  propuestasabiertas.hcdn.gob.ar (link)</Span>
                     </Item>
                   </Box>
                   <Box style={{marginTop: 20}}>
@@ -55,8 +55,8 @@ const CommentContribution = (props) => {
                         <Box style={{width: 50, height: 140, backgroundColor: '#f2f5f8'}}>
                           <Item>
                             <Box style={{marginBottom: 91, marginLeft: 14}}>
-                              <Item>
-                                <Image src="https://picsum.photos/22/22" style={{width: 22, height: 22}} />
+                              <Item style={{border: "2 solid #ef885d"}}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none" stroke="#ef885d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                               </Item>
                             </Box>
                           </Item>
@@ -84,12 +84,6 @@ const CommentContribution = (props) => {
               <Box align='center' style={{width: 643, height: 136, marginLeft: 57}}>
                 <Item align='justify'>
                   <Span align='justify'>Saludos cordiales,</Span>
-                </Item>
-              </Box>
-
-              <Box align="center" style={{width: 700, height: 136}}>
-                <Item align="center" style={{height: 411}}>
-                  <Image src="https://picsum.photos/290/241" />
                 </Item>
               </Box>
 
