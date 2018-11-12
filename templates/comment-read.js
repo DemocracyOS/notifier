@@ -1,6 +1,7 @@
 const React = require('react');
 const ReactDom = require('react-dom/server');
 const { Email, Item, Span, A, renderEmail, Box, Image } = require ('react-html-email');
+const { ORGANIZATION_NAME, ORGANIZATION_URL } = process.env;
 const spanStyles = {
   fontSize: 16,
   fontWeight: 'bold',
@@ -40,7 +41,7 @@ const CommentRead = (props) => {
                   </Span>
                   <Box style={{marginTop: 30}}>
                     <Item>
-                      <Span {...mailStyle}>- El/la diputado/a xxxxxxxxx  resolvió su comentario en la propuesta de ley regulación de contaminación sonora en propuestasabiertas.hcdn.gob.ar (link)</Span>
+                      <Span {...mailStyle}>- El/la diputado/a xxxxxxxxx  resolvió su comentario en la propuesta de ley regulación de contaminación sonora en</Span> <A style={{textDecoration: 'none'}}href="{process.env.ORGANIZATION_URL}">{process.env.ORGANIZATION_NAME}</A>
                     </Item>
                   </Box>
                   <Box style={{marginTop: 20}}>
