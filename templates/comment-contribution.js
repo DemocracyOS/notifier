@@ -1,6 +1,7 @@
 const React = require('react');
 const ReactDom = require('react-dom/server');
 const { Email, Item, Span, A, renderEmail, Box, Image } = require ('react-html-email');
+const { ORGANIZATION_NAME, ORGANIZATION_URL } = process.env;
 const spanStyles = {
   fontSize: 16,
   fontWeight: 'bold',
@@ -40,7 +41,7 @@ const CommentContribution = (props) => {
                   </Span>
                   <Box style={{marginTop: 30}}>
                     <Item>
-                      <Span {...mailStyle}>- El/la diputado/a xxx creó un nueva versión del propuesta de ley regulación de contaminación sonora y destacó su comentario como aporte. Para ver la nueva versión ingrese en  propuestasabiertas.hcdn.gob.ar (link)</Span>
+                      <Span {...mailStyle}>- El/la diputado/a xxx creó un nueva versión del propuesta de ley regulación de contaminación sonora y destacó su comentario como aporte. Para ver la nueva versión ingrese en <A href="{process.env.ORGANIZATION_URL}">{process.env.ORGANIZATION_NAME}</A></Span>
                     </Item>
                   </Box>
                   <Box style={{marginTop: 20}}>
@@ -68,7 +69,7 @@ const CommentContribution = (props) => {
                         </Box>
                         <Box align="center" style={{marginLeft: 121, marginTop: 16}}>
                           <Item >
-                            <Span>{props.author}</Span>
+                            <Span>{props.participant.name}</Span>
                           </Item>
                           <Item>
                             <Span>Occupation</Span>
@@ -76,7 +77,7 @@ const CommentContribution = (props) => {
                         </Box>
                         <Box align="center" style={{marginLeft: 80, marginTop: 20, marginBottom: 22}}>
                           <Item>
-                            <Span style={{fontSize: 14}}>{props.comment} Hola! Sugiero que aecenas pentesque, erat eget eleifend dictum, felis neque sodales erat, at tincidunt enim dui pulvinar neque. Gracias!</Span>
+                            <Span style={{fontSize: 14}}>{props.comment}</Span>
                           </Item>
                         </Box>
                 </Item>
