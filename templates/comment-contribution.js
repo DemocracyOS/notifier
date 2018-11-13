@@ -22,6 +22,8 @@ const mailStyle = {
   color: '#203340',
 }
 
+const HomeLink = () => <A href={process.env.ORGANIZATION_URL}>{process.env.ORGANIZATION_NAME}</A>
+
 const CommentContribution = (props) => {
   return (
     <Email>
@@ -42,13 +44,13 @@ const CommentContribution = (props) => {
             <Item>
               <Span {...mailStyle}>
                 {
-                  props.accountable.gender === 'Femenino'
+                  (props.accountable.gender === 'Femenino'
                   ? 'La diputada '
                   : props.accountable.gender === 'Masculino'
                     ? 'El diputado '
-                    : 'El/la diputado/a '
+                    : 'El/la diputado/a ') + props.accountable.fullname
                 }
-                { props.accountable.fullname } creó un nueva versión de la propuesta de { props.title && props.title.toLowerCase() } y destacó su comentario como aporte. Para ver la nueva versión ingrese en <HomeLink />.
+                creó un nueva versión de la propuesta de { props.title && props.title.toLowerCase() } y destacó su comentario como aporte. Para ver la nueva versión ingrese en <HomeLink />.
               </Span>
             </Item>
           </Box>

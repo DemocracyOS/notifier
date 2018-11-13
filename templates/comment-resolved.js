@@ -1,5 +1,4 @@
 const React = require('react');
-const ReactDom = require('react-dom/server');
 const { Email, Item, Span, A, renderEmail, Box, Image } = require ('react-html-email');
 const { ORGANIZATION_NAME, ORGANIZATION_URL } = process.env;
 const spanStyles = {
@@ -22,6 +21,8 @@ const mailStyle = {
   color: '#203340',
 }
 
+const HomeLink = () => <A href={process.env.ORGANIZATION_URL}>{process.env.ORGANIZATION_NAME}</A>
+
 const CommentRead = (props) => {
   return (
     <Email>
@@ -42,13 +43,13 @@ const CommentRead = (props) => {
             <Item>
               <Span {...mailStyle}>
                 {
-                  props.accountable.gender === 'Femenino'
+                  (props.accountable.gender === 'Femenino'
                   ? 'La diputada '
                   : props.accountable.gender === 'Masculino'
                     ? 'El diputado '
-                    : 'El/la diputado/a '
+                    : 'El/la diputado/a ') + props.accountable.fullname
                 }
-                { props.accountable.fullname } resolvió su comentario en la propuesta de { props.title && props.title.toLowerCase() } en <HomeLink />.
+                resolvió su comentario en la propuesta de { props.title && props.title.toLowerCase() } en <HomeLink />.
               </Span>
             </Item>
           </Box>

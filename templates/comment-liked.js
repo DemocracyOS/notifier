@@ -1,4 +1,5 @@
 const React = require('react');
+const Fragment = React.Fragment
 const ReactDom = require('react-dom/server');
 const { Email, Item, Span, A, renderEmail, Box, Image } = require ('react-html-email');
 const { ORGANIZATION_NAME, ORGANIZATION_URL } = process.env;
@@ -22,7 +23,7 @@ const mailStyle = {
   color: '#203340',
 }
 
-const HomeLink = <A href={process.env.ORGANIZATION_URL}>{process.env.ORGANIZATION_NAME}</A>
+const HomeLink = () => <A href={process.env.ORGANIZATION_URL}>{process.env.ORGANIZATION_NAME}</A>
 
 const CommentLiked = (props) => {
   return (
@@ -44,13 +45,13 @@ const CommentLiked = (props) => {
             <Item>
               <Span {...mailStyle}>
                 {
-                  props.accountable.gender === 'Femenino'
+                  (props.accountable.gender === 'Femenino'
                   ? 'La diputada '
                   : props.accountable.gender === 'Masculino'
                     ? 'El diputado '
-                    : 'El/la diputado/a '
+                    : 'El/la diputado/a ') + props.accountable.fullname
                 }
-                { props.accountable.fullname } apoyó el comentario que realizó en la propuesta de { props.title && props.title.toLowerCase() } en <HomeLink />. Ingrese en <HomeLink /> para conocer y comentar en otros proyectos.
+                apoyó el comentario que realizó en la propuesta de { props.title && props.title.toLowerCase() } en <HomeLink />. Ingrese en <HomeLink /> para conocer y comentar en otros proyectos.
               </Span>
             </Item>
           </Box>
@@ -72,6 +73,7 @@ const CommentLiked = (props) => {
                 </Box>
               </Item>
             </Box>
+
             <Box align="center" style={{marginLeft: 121, marginTop: 16}}>
               <Item >
                 <Span>{props.participant.name}</Span>
