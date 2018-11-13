@@ -1,6 +1,7 @@
 const React = require('react');
 const ReactDom = require('react-dom/server');
 const { Email, Item, Span, A, renderEmail, Box, Image } = require ('react-html-email');
+const { ORGANIZATION_NAME, ORGANIZATION_URL } = process.env;
 const spanStyles = {
   width: 340,
   height: 125,
@@ -41,7 +42,7 @@ const CommentClosed = (props) => {
                   </Span>
                   <Box style={{marginTop: 30}}>
                     <Item>
-                      <Span {...mailStyle}>- Finalizó el periodo para realizar aportes en la propuesta de ley regulación de contaminación sonora en la que comentó. Ingrese en propuestasabiertas.hcdn.gob.ar (link) para ver la versión final y los resultados del proceso de co-creación de normas.</Span>
+                      <Span {...mailStyle}>- Finalizó el periodo para realizar aportes en la propuesta de ley regulación de contaminación sonora en la que comentó. Ingrese en <A href="{process.env.ORGANIZATION_URL}">{process.env.ORGANIZATION_NAME}</A>para ver la versión final y los resultados del proceso de co-creación de normas.</Span>
                     </Item>
                   </Box>
               </Item>

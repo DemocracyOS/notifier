@@ -1,6 +1,7 @@
 const React = require('react');
 const ReactDom = require('react-dom/server');
 const { Email, Item, Span, A, renderEmail, Box, Image } = require ('react-html-email');
+const { ORGANIZATION_NAME, ORGANIZATION_URL } = process.env;
 const spanStyles = {
   fontSize: 16,
   fontWeight: 'bold',
@@ -40,7 +41,7 @@ const CommentLiked = (props) => {
                   </Span>
                   <Box style={{marginTop: 30}}>
                     <Item>
-                      <Span {...mailStyle}>- El/la diputado/a xxxxx apoyó el comentario que realizó en la propuesta de ley regulación de contaminación sonora en propuestasabiertas.hcdn.gob.ar (link). Ingrese en propuestasabiertas.hcdn.gob.ar (link) para conocer y comentar en otros proyectos.</Span>
+                      <Span {...mailStyle}>- El/la diputado/a xxxxx apoyó el comentario que realizó en la propuesta de ley regulación de contaminación sonora en propuestasabiertas.hcdn.gob.ar (link). Ingrese en <A href="{process.env.ORGANIZATION_URL}">{process.env.ORGANIZATION_NAME}</A>para conocer y comentar en otros proyectos.</Span>
                     </Item>
                   </Box>
                   <Box style={{marginTop: 20}}>
@@ -68,7 +69,7 @@ const CommentLiked = (props) => {
                         </Box>
                         <Box align="center" style={{marginLeft: 121, marginTop: 16}}>
                           <Item >
-                            <Span>{props.author}</Span>
+                            <Span>{props.participant.name}</Span>
                           </Item>
                           <Item>
                             <Span>Occupation</Span>
@@ -76,7 +77,7 @@ const CommentLiked = (props) => {
                         </Box>
                         <Box align="center" style={{marginLeft: 80, marginTop: 20, marginBottom: 22}}>
                           <Item>
-                            <Span style={{fontSize: 14}}>{props.comment} Hola! Sugiero que aecenas pentesque, erat eget eleifend dictum, felis neque sodales erat, at tincidunt enim dui pulvinar neque. Gracias!</Span>
+                            <Span style={{fontSize: 14}}>{props.comment}</Span>
                           </Item>
                         </Box>
                 </Item>
