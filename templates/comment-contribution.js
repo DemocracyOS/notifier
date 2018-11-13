@@ -31,21 +31,30 @@ const CommentContribution = (props) => {
         </Item>
 
         <Item align="center" style={{display: "block", marginTop: 25, marginLeft: 191, marginRight: 191}}>
-          <Span {...pStyle}>Elaboración de <Span style={{fontWeight: 'bold', fontSize: 20}}>Propuestas de Ley</Span></Span>
+          <Span {...pStyle}>Portal de <Span style={{fontWeight: 'bold', fontSize: 20}}>Co-creación Legislativa</Span></Span>
         </Item>
 
         <Item style={{display: "block", marginTop: 25, margin: 57}}>
           <Span {...spanStyles}>
-            Hola {props.author},
+            Hola {props.participant.name},
           </Span>
           <Box style={{marginTop: 30}}>
             <Item>
-              <Span {...mailStyle}>- El/la diputado/a xxx creó un nueva versión del propuesta de ley regulación de contaminación sonora y destacó su comentario como aporte. Para ver la nueva versión ingrese en <A href="{process.env.ORGANIZATION_URL}">{process.env.ORGANIZATION_NAME}</A></Span>
+              <Span {...mailStyle}>
+                {
+                  props.accountable.gender === 'Femenino'
+                  ? 'La diputada '
+                  : props.accountable.gender === 'Masculino'
+                    ? 'El diputado '
+                    : 'El/la diputado/a '
+                }
+                { props.accountable.fullname } creó un nueva versión de la propuesta de { props.title && props.title.toLowerCase() } y destacó su comentario como aporte. Para ver la nueva versión ingrese en <HomeLink />.
+              </Span>
             </Item>
           </Box>
           <Box style={{marginTop: 20}}>
             <Item>
-              <Span {...mailStyle}> Este fue tu comentario:</Span>
+              <Span {...mailStyle}>Este fue tu comentario:</Span>
             </Item>
           </Box>
         </Item>
@@ -55,15 +64,10 @@ const CommentContribution = (props) => {
             <Box style={{width: 50, height: 140, backgroundColor: '#f2f5f8'}}>
               <Item>
                 <Box style={{marginBottom: 91, marginLeft: 14}}>
-                  <Item style={{border: "2 solid #ef885d"}}>
-                    <Image src="https://complejoteatral.blob.core.windows.net/assets/star.png" />
+                  <Item>
+                    <Image src="https://complejoteatral.blob.core.windows.net/assets/star.png" style={{width: 24.7, height: 24.7}}/>
                   </Item>
                 </Box>
-              </Item>
-            </Box>
-            <Box style={{marginLeft: 28, marginTop: 16}}>
-              <Item>
-                <Image style={{borderRadius: 50}} src="https://picsum.photos/30/30" />
               </Item>
             </Box>
             <Box align="center" style={{marginLeft: 121, marginTop: 16}}>
@@ -71,7 +75,7 @@ const CommentContribution = (props) => {
                 <Span>{props.participant.name}</Span>
               </Item>
               <Item>
-                <Span>Occupation</Span>
+                <Span>{props.participant.occupation}</Span>
               </Item>
             </Box>
             <Box align="center" style={{marginLeft: 80, marginTop: 20, marginBottom: 22}}>
@@ -79,12 +83,6 @@ const CommentContribution = (props) => {
                 <Span style={{fontSize: 14}}>{props.comment}</Span>
               </Item>
             </Box>
-          </Item>
-        </Box>
-
-        <Box align='center' style={{width: 643, height: 136, marginLeft: 57}}>
-          <Item align='justify'>
-            <Span align='justify'>Saludos cordiales,</Span>
           </Item>
         </Box>
 

@@ -22,6 +22,8 @@ const mailStyle = {
   color: '#203340',
 }
 
+const HomeLink = <A href={process.env.ORGANIZATION_URL}>{process.env.ORGANIZATION_NAME}</A>
+
 const CommentLiked = (props) => {
   return (
     <Email>
@@ -36,16 +38,25 @@ const CommentLiked = (props) => {
 
         <Item style={{display: "block", marginTop: 25, margin: 57}}>
           <Span {...spanStyles}>
-            Hola {props.author},
+            Hola {props.participant.name},
           </Span>
           <Box style={{marginTop: 30}}>
             <Item>
-              <Span {...mailStyle}>- El/la diputado/a xxxxx apoyó el comentario que realizó en la propuesta de ley regulación de contaminación sonora en propuestasabiertas.hcdn.gob.ar (link). Ingrese en <A href="{process.env.ORGANIZATION_URL}">{process.env.ORGANIZATION_NAME}</A>para conocer y comentar en otros proyectos.</Span>
+              <Span {...mailStyle}>
+                {
+                  props.accountable.gender === 'Femenino'
+                  ? 'La diputada '
+                  : props.accountable.gender === 'Masculino'
+                    ? 'El diputado '
+                    : 'El/la diputado/a '
+                }
+                { props.accountable.fullname } apoyó el comentario que realizó en la propuesta de { props.title && props.title.toLowerCase() } en <HomeLink />. Ingrese en <HomeLink /> para conocer y comentar en otros proyectos.
+              </Span>
             </Item>
           </Box>
           <Box style={{marginTop: 20}}>
             <Item>
-              <Span {...mailStyle}> Este fue tu comentario marcado como:</Span>
+              <Span {...mailStyle}>Este fue tu comentario marcado como:</Span>
             </Item>
           </Box>
         </Item>
@@ -61,17 +72,12 @@ const CommentLiked = (props) => {
                 </Box>
               </Item>
             </Box>
-            <Box style={{marginLeft: 28, marginTop: 16}}>
-              <Item>
-                <Image style={{borderRadius: 50}} src="https://picsum.photos/30/30" />
-              </Item>
-            </Box>
             <Box align="center" style={{marginLeft: 121, marginTop: 16}}>
               <Item >
                 <Span>{props.participant.name}</Span>
               </Item>
               <Item>
-                <Span>Occupation</Span>
+                <Span>{props.participant.occupation}</Span>
               </Item>
             </Box>
             <Box align="center" style={{marginLeft: 80, marginTop: 20, marginBottom: 22}}>
