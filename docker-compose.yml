@@ -10,6 +10,6 @@ services:
     volumes:
       - ./templates:/usr/src/app/templates
   mongo:
-    image: mongo
+    image: mongo:3.6
     ports:
     - "27017:27017"

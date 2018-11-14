@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 
 app.use('/api/sendemail', sendEmailRoutes);
 
-if (NODE_ENV != 'production') app.use('/views', require('./api/routes/dev-view'));
+if (NODE_ENV === 'development') app.use('/views', require('./api/routes/dev-view'));
 
 app.use((req, res, next) => {
 	const error = new Error('Not found');
