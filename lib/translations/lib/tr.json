@@ -1,0 +1,19 @@
+{
+  "templates.email.greeting": "Merhaba, {userName},",
+  "templates.email.signature": "konusuyor.org grubu.",
+
+  "templates.welcome-email.subject": "konusuyor.org'a hoşgeldiniz!",
+  "templates.welcome-email.body": "Hesabınızı aktive etmek için lütfen <a href=\"{validateUrl}\">buraya tıklayınız</a>.",
+  "templates.welcome-email.ps": "Not: Eğer bu siteye kayıt olmadıysanız lütfen bu mesajı görmezden gelin.",
+
+  "templates.forgot-password.subject": "Şifre resetleme talebinde bulunuldu",
+  "templates.forgot-password.body": "Şifrenizi resetlemek için lütfen <a href=\"{resetPasswordUrl}\">buraya tıklayınız</a>",
+  "templates.forgot-password.ps": "Not: Eğer bu işlem size ait değilse lütfen bu maili görmezden gelin.",
+
+  "templates.comment-reply.subject": "Savınıza yanıt verildi",
+  "templates.new-comment.subject": "Şuraya yanıt verildi: \"{topicTitle}\"",
+
+  "templates.topic-published.subject": "Yeni konu yayınlandı",
+  "templates.topic-published.body": "Yeni bir konu yayınlandı:",
+  "templates.topic-published.body2": "Görmek için lütfen <a href=\"{url}\">buraya tıklayınız</a>."
+}
