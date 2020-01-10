@@ -40,3 +40,10 @@ Not recommended for `production`. Using direct transport is not reliable as outg
 ```javascript
 var notifier = require('democracyos-notifier')()
 ```
+
+### Testing the code
+First install packages with `npm install`
+
+Then modify [`example.js`](./example.js) from and to mails.
+
+Test running `node example.js`

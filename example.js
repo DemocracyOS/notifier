@@ -4,7 +4,15 @@ const config = require('./lib/config')
 const notifier = require('.')
 
 config.set({
-  mongoUrl: 'mongodb://localhost/DemocracyOS-dev'
+  "mongoUrl": 'mongodb://localhost/DemocracyOS-dev',
+  "defaultLocale": "es",
+  "mailer": {
+    "service": "gmail", // can be other provider
+    "auth": {
+      "user": "my-send-email@gmail.com",
+      "pass": "dont-commit-me!"
+    }
+  }
 })
 
 notifier.start()
@@ -12,7 +20,7 @@ notifier.start()
     console.log('Executing job welcome-email')
 
     return notifier.now('welcome-email', {
-      to: 'matias@democracyos.org',
+      to: 'test-to-mail@whatever.com',
       validateUrl: 'https://app.democracyos.org'
     })
   })
