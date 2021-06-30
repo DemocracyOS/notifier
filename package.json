@@ -29,7 +29,7 @@
     "es6-string-html-template": "~1.0.2",
     "mongodb": "~2.2.28",
     "monk": "~6.0.0",
-    "nodemailer": "~4.0.1",
+    "nodemailer": "~6.6.1",
     "pify": "~3.0.0",
     "require-all": "~2.2.0",
     "t-component": "1.0.0"
